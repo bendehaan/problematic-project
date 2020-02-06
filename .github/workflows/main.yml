@@ -24,7 +24,7 @@ jobs:
         uses: brpaz/hadolint-action@v1.0.2
         continue-on-error: true
       - name: build Docker
-        run: docker build . -t benno001/problematic-project
+        run: docker build . -t problematic-project
       - name: Dockle
         run: |
           export DOCKLE_LATEST=$(
@@ -32,5 +32,5 @@ jobs:
             grep '"tag_name":' | \
             sed -E 's/.*"v([^"]+)".*/\1/' \
             )
-          docker run --rm goodwithtech/dockle:v${DOCKLE_LATEST} benno001/problematic-project:latest
+          docker run --rm goodwithtech/dockle:v${DOCKLE_LATEST} problematic-project:latest
         
