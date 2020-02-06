@@ -16,15 +16,6 @@ jobs:
           args: "check"
       - name: Bandit Check
         uses: jpetrucciani/bandit-check@1.6.2
-      - name: build Docker
-        run: docker build . -t benno001/problematic-project
-      - name: Dockle
-        run: |
-          export DOCKLE_LATEST=$(
-            curl --silent "https://api.github.com/repos/goodwithtech/dockle/releases/latest" | \
-            grep '"tag_name":' | \
-            sed -E 's/.*"v([^"]+)".*/\1/' \
-            )
-          docker run --rm goodwithtech/dockle:v${DOCKLE_LATEST} benno001/problematic-project:latest
-      
+      - name: Hadolint Action
+        uses: brpaz/hadolint-action@v1.0.2    
         
