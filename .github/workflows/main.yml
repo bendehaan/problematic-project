@@ -16,8 +16,21 @@ jobs:
       - uses: VaultVulp/action-pipenv@v1.0.0
         with:
           args: "check"
+        continue-on-error: true
       - name: Bandit Check
         uses: jpetrucciani/bandit-check@1.6.2
+        continue-on-error: true
       - name: Hadolint Action
-        uses: brpaz/hadolint-action@v1.0.2    
+        uses: brpaz/hadolint-action@v1.0.2
+        continue-on-error: true
+      - name: build Docker
+        run: docker build . -t benno001/problematic-project
+      - name: Dockle
+        run: |
+          export DOCKLE_LATEST=$(
+            curl --silent "https://api.github.com/repos/goodwithtech/dockle/releases/latest" | \
+            grep '"tag_name":' | \
+            sed -E 's/.*"v([^"]+)".*/\1/' \
+            )
+          docker run --rm goodwithtech/dockle:v${DOCKLE_LATEST} benno001/problematic-project:latest
         
