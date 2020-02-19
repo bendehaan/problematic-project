@@ -1,0 +1,2807 @@
+[
+  {
+    "Target": "benno001/problematic-project (debian 10.2)",
+    "Vulnerabilities": [
+      {
+        "VulnerabilityID": "CVE-2019-18276",
+        "PkgName": "bash",
+        "InstalledVersion": "5.0-4",
+        "Title": "bash: when effective UID is not equal to its real UID the saved UID is not dropped",
+        "Description": "An issue was discovered in disable_priv_mode in shell.c in GNU Bash through 5.0 patch 11. By default, if Bash is run with its effective UID not equal to its real UID, it will drop privileges by setting its effective UID to its real UID. However, it does so incorrectly. On Linux and other systems that support \"saved UID\" functionality, the saved UID is not dropped. An attacker with command execution in the shell can use \"enable -f\" for runtime loading of a new builtin, which can be a shared object that calls setuid() and therefore regains privileges. However, binaries running with an effective UID of 0 are unaffected.",
+        "Severity": "HIGH",
+        "References": [
+          "http://packetstormsecurity.com/files/155498/Bash-5.0-Patch-11-Privilege-Escalation.html",
+          "https://github.com/bminor/bash/commit/951bdaad7a18cc0dc1036bba86b18b90874d39ff",
+          "https://www.youtube.com/watch?v=-wGtxJ8opa8"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2017-13716",
+        "PkgName": "binutils",
+        "InstalledVersion": "2.31.1-16",
+        "Title": "binutils: Memory leak with the C++ symbol demangler routine in libiberty",
+        "Description": "The C++ symbol demangler routine in cplus-dem.c in libiberty, as distributed in GNU Binutils 2.29, allows remote attackers to cause a denial of service (excessive memory allocation and application crash) via a crafted file, as demonstrated by a call from the Binary File Descriptor (BFD) library (aka libbfd).",
+        "Severity": "HIGH",
+        "References": [
+          "https://sourceware.org/bugzilla/show_bug.cgi?id=22009"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2018-12699",
+        "PkgName": "binutils",
+        "InstalledVersion": "2.31.1-16",
+        "Title": "binutils: heap-based buffer overflow in finish_stab in stabs.c",
+        "Description": "finish_stab in stabs.c in GNU Binutils 2.30 allows attackers to cause a denial of service (heap-based buffer overflow) or possibly have unspecified other impact, as demonstrated by an out-of-bounds write of 8 bytes. This can occur during execution of objdump.",
+        "Severity": "HIGH",
+        "References": [
+          "http://www.securityfocus.com/bid/104540",
+          "https://bugs.launchpad.net/ubuntu/+source/binutils/+bug/1763102",
+          "https://gcc.gnu.org/bugzilla/show_bug.cgi?id=85454",
+          "https://security.gentoo.org/glsa/201908-01",
+          "https://sourceware.org/bugzilla/show_bug.cgi?id=23057"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2017-13716",
+        "PkgName": "binutils-common",
+        "InstalledVersion": "2.31.1-16",
+        "Title": "binutils: Memory leak with the C++ symbol demangler routine in libiberty",
+        "Description": "The C++ symbol demangler routine in cplus-dem.c in libiberty, as distributed in GNU Binutils 2.29, allows remote attackers to cause a denial of service (excessive memory allocation and application crash) via a crafted file, as demonstrated by a call from the Binary File Descriptor (BFD) library (aka libbfd).",
+        "Severity": "HIGH",
+        "References": [
+          "https://sourceware.org/bugzilla/show_bug.cgi?id=22009"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2018-12699",
+        "PkgName": "binutils-common",
+        "InstalledVersion": "2.31.1-16",
+        "Title": "binutils: heap-based buffer overflow in finish_stab in stabs.c",
+        "Description": "finish_stab in stabs.c in GNU Binutils 2.30 allows attackers to cause a denial of service (heap-based buffer overflow) or possibly have unspecified other impact, as demonstrated by an out-of-bounds write of 8 bytes. This can occur during execution of objdump.",
+        "Severity": "HIGH",
+        "References": [
+          "http://www.securityfocus.com/bid/104540",
+          "https://bugs.launchpad.net/ubuntu/+source/binutils/+bug/1763102",
+          "https://gcc.gnu.org/bugzilla/show_bug.cgi?id=85454",
+          "https://security.gentoo.org/glsa/201908-01",
+          "https://sourceware.org/bugzilla/show_bug.cgi?id=23057"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2017-13716",
+        "PkgName": "binutils-x86-64-linux-gnu",
+        "InstalledVersion": "2.31.1-16",
+        "Title": "binutils: Memory leak with the C++ symbol demangler routine in libiberty",
+        "Description": "The C++ symbol demangler routine in cplus-dem.c in libiberty, as distributed in GNU Binutils 2.29, allows remote attackers to cause a denial of service (excessive memory allocation and application crash) via a crafted file, as demonstrated by a call from the Binary File Descriptor (BFD) library (aka libbfd).",
+        "Severity": "HIGH",
+        "References": [
+          "https://sourceware.org/bugzilla/show_bug.cgi?id=22009"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2018-12699",
+        "PkgName": "binutils-x86-64-linux-gnu",
+        "InstalledVersion": "2.31.1-16",
+        "Title": "binutils: heap-based buffer overflow in finish_stab in stabs.c",
+        "Description": "finish_stab in stabs.c in GNU Binutils 2.30 allows attackers to cause a denial of service (heap-based buffer overflow) or possibly have unspecified other impact, as demonstrated by an out-of-bounds write of 8 bytes. This can occur during execution of objdump.",
+        "Severity": "HIGH",
+        "References": [
+          "http://www.securityfocus.com/bid/104540",
+          "https://bugs.launchpad.net/ubuntu/+source/binutils/+bug/1763102",
+          "https://gcc.gnu.org/bugzilla/show_bug.cgi?id=85454",
+          "https://security.gentoo.org/glsa/201908-01",
+          "https://sourceware.org/bugzilla/show_bug.cgi?id=23057"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2019-5481",
+        "PkgName": "curl",
+        "InstalledVersion": "7.64.0-4",
+        "Title": "curl: double free due to subsequent call of realloc()",
+        "Description": "Double-free vulnerability in the FTP-kerberos code in cURL 7.52.0 to 7.65.3.",
+        "Severity": "HIGH",
+        "References": [
+          "http://lists.opensuse.org/opensuse-security-announce/2019-09/msg00048.html",
+          "http://lists.opensuse.org/opensuse-security-announce/2019-09/msg00055.html",
+          "https://curl.haxx.se/docs/CVE-2019-5481.html",
+          "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/RGDVKSLY5JUNJRLYRUA6CXGQ2LM63XC3/",
+          "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/UA7KDM2WPM5CJDDGOEGFV6SSGD2J7RNT/"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2019-5482",
+        "PkgName": "curl",
+        "InstalledVersion": "7.64.0-4",
+        "Title": "curl: heap buffer overflow in function tftp_receive_packet()",
+        "Description": "Heap buffer overflow in the TFTP protocol handler in cURL 7.19.4 to 7.65.3.",
+        "Severity": "HIGH",
+        "References": [
+          "http://lists.opensuse.org/opensuse-security-announce/2019-09/msg00048.html",
+          "http://lists.opensuse.org/opensuse-security-announce/2019-09/msg00055.html",
+          "https://curl.haxx.se/docs/CVE-2019-5482.html",
+          "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-5482",
+          "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/RGDVKSLY5JUNJRLYRUA6CXGQ2LM63XC3/",
+          "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/UA7KDM2WPM5CJDDGOEGFV6SSGD2J7RNT/"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2018-15607",
+        "PkgName": "imagemagick",
+        "InstalledVersion": "8:6.9.10.23+dfsg-2.1",
+        "Title": "ImageMagick: CPU Exhaustion via crafted input file",
+        "Description": "In ImageMagick 7.0.8-11 Q16, a tiny input file 0x50 0x36 0x36 0x36 0x36 0x4c 0x36 0x38 0x36 0x36 0x36 0x36 0x36 0x36 0x1f 0x35 0x50 0x00 can result in a hang of several minutes during which CPU and memory resources are consumed until ultimately an attempted large memory allocation fails. Remote attackers could leverage this vulnerability to cause a denial of service via a crafted file.",
+        "Severity": "HIGH",
+        "References": [
+          "http://www.securityfocus.com/bid/105137",
+          "https://github.com/ImageMagick/ImageMagick/issues/1255",
+          "https://usn.ubuntu.com/4034-1/"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2019-11470",
+        "PkgName": "imagemagick",
+        "InstalledVersion": "8:6.9.10.23+dfsg-2.1",
+        "Title": "ImageMagick: denial of service in cineon parsing component",
+        "Description": "The cineon parsing component in ImageMagick 7.0.8-26 Q16 allows attackers to cause a denial-of-service (uncontrolled resource consumption) by crafting a Cineon image with an incorrect claimed image size. This occurs because ReadCINImage in coders/cin.c lacks a check for insufficient image data in a file.",
+        "Severity": "HIGH",
+        "References": [
+          "http://lists.opensuse.org/opensuse-security-announce/2019-06/msg00057.html",
+          "http://lists.opensuse.org/opensuse-security-announce/2019-07/msg00001.html",
+          "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-11470",
+          "https://github.com/ImageMagick/ImageMagick/commit/e3cdce6fe12193f235b8c0ae5efe6880a25eb957",
+          "https://github.com/ImageMagick/ImageMagick/issues/1472",
+          "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/PF62B5PJA2JDUOCKJGUQO3SPL74BEYSV/",
+          "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/WHIKB4TP6KBJWT2UIPWL5MWMG5QXKGEJ/",
+          "https://usn.ubuntu.com/4034-1/"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2019-19948",
+        "PkgName": "imagemagick",
+        "InstalledVersion": "8:6.9.10.23+dfsg-2.1",
+        "Title": "ImageMagick: heap-based buffer overflow in WriteSGIImage in coders/sgi.c",
+        "Description": "In ImageMagick 7.0.8-43 Q16, there is a heap-based buffer overflow in the function WriteSGIImage of coders/sgi.c.",
+        "Severity": "HIGH",
+        "References": [
+          "http://lists.opensuse.org/opensuse-security-announce/2020-02/msg00006.html",
+          "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-19948",
+          "https://github.com/ImageMagick/ImageMagick/issues/1562",
+          "https://lists.debian.org/debian-lts-announce/2019/12/msg00033.html"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2019-19952",
+        "PkgName": "imagemagick",
+        "InstalledVersion": "8:6.9.10.23+dfsg-2.1",
+        "Title": "ImageMagick: use-after-free in MngInfoDiscardObject in coders/png.c",
+        "Description": "In ImageMagick 7.0.9-7 Q16, there is a use-after-free in the function MngInfoDiscardObject of coders/png.c, related to ReadOneMNGImage.",
+        "Severity": "HIGH",
+        "References": [
+          "https://github.com/ImageMagick/ImageMagick/issues/1791"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2018-15607",
+        "PkgName": "imagemagick-6-common",
+        "InstalledVersion": "8:6.9.10.23+dfsg-2.1",
+        "Title": "ImageMagick: CPU Exhaustion via crafted input file",
+        "Description": "In ImageMagick 7.0.8-11 Q16, a tiny input file 0x50 0x36 0x36 0x36 0x36 0x4c 0x36 0x38 0x36 0x36 0x36 0x36 0x36 0x36 0x1f 0x35 0x50 0x00 can result in a hang of several minutes during which CPU and memory resources are consumed until ultimately an attempted large memory allocation fails. Remote attackers could leverage this vulnerability to cause a denial of service via a crafted file.",
+        "Severity": "HIGH",
+        "References": [
+          "http://www.securityfocus.com/bid/105137",
+          "https://github.com/ImageMagick/ImageMagick/issues/1255",
+          "https://usn.ubuntu.com/4034-1/"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2019-11470",
+        "PkgName": "imagemagick-6-common",
+        "InstalledVersion": "8:6.9.10.23+dfsg-2.1",
+        "Title": "ImageMagick: denial of service in cineon parsing component",
+        "Description": "The cineon parsing component in ImageMagick 7.0.8-26 Q16 allows attackers to cause a denial-of-service (uncontrolled resource consumption) by crafting a Cineon image with an incorrect claimed image size. This occurs because ReadCINImage in coders/cin.c lacks a check for insufficient image data in a file.",
+        "Severity": "HIGH",
+        "References": [
+          "http://lists.opensuse.org/opensuse-security-announce/2019-06/msg00057.html",
+          "http://lists.opensuse.org/opensuse-security-announce/2019-07/msg00001.html",
+          "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-11470",
+          "https://github.com/ImageMagick/ImageMagick/commit/e3cdce6fe12193f235b8c0ae5efe6880a25eb957",
+          "https://github.com/ImageMagick/ImageMagick/issues/1472",
+          "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/PF62B5PJA2JDUOCKJGUQO3SPL74BEYSV/",
+          "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/WHIKB4TP6KBJWT2UIPWL5MWMG5QXKGEJ/",
+          "https://usn.ubuntu.com/4034-1/"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2019-19948",
+        "PkgName": "imagemagick-6-common",
+        "InstalledVersion": "8:6.9.10.23+dfsg-2.1",
+        "Title": "ImageMagick: heap-based buffer overflow in WriteSGIImage in coders/sgi.c",
+        "Description": "In ImageMagick 7.0.8-43 Q16, there is a heap-based buffer overflow in the function WriteSGIImage of coders/sgi.c.",
+        "Severity": "HIGH",
+        "References": [
+          "http://lists.opensuse.org/opensuse-security-announce/2020-02/msg00006.html",
+          "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-19948",
+          "https://github.com/ImageMagick/ImageMagick/issues/1562",
+          "https://lists.debian.org/debian-lts-announce/2019/12/msg00033.html"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2019-19952",
+        "PkgName": "imagemagick-6-common",
+        "InstalledVersion": "8:6.9.10.23+dfsg-2.1",
+        "Title": "ImageMagick: use-after-free in MngInfoDiscardObject in coders/png.c",
+        "Description": "In ImageMagick 7.0.9-7 Q16, there is a use-after-free in the function MngInfoDiscardObject of coders/png.c, related to ReadOneMNGImage.",
+        "Severity": "HIGH",
+        "References": [
+          "https://github.com/ImageMagick/ImageMagick/issues/1791"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2018-15607",
+        "PkgName": "imagemagick-6.q16",
+        "InstalledVersion": "8:6.9.10.23+dfsg-2.1",
+        "Title": "ImageMagick: CPU Exhaustion via crafted input file",
+        "Description": "In ImageMagick 7.0.8-11 Q16, a tiny input file 0x50 0x36 0x36 0x36 0x36 0x4c 0x36 0x38 0x36 0x36 0x36 0x36 0x36 0x36 0x1f 0x35 0x50 0x00 can result in a hang of several minutes during which CPU and memory resources are consumed until ultimately an attempted large memory allocation fails. Remote attackers could leverage this vulnerability to cause a denial of service via a crafted file.",
+        "Severity": "HIGH",
+        "References": [
+          "http://www.securityfocus.com/bid/105137",
+          "https://github.com/ImageMagick/ImageMagick/issues/1255",
+          "https://usn.ubuntu.com/4034-1/"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2019-11470",
+        "PkgName": "imagemagick-6.q16",
+        "InstalledVersion": "8:6.9.10.23+dfsg-2.1",
+        "Title": "ImageMagick: denial of service in cineon parsing component",
+        "Description": "The cineon parsing component in ImageMagick 7.0.8-26 Q16 allows attackers to cause a denial-of-service (uncontrolled resource consumption) by crafting a Cineon image with an incorrect claimed image size. This occurs because ReadCINImage in coders/cin.c lacks a check for insufficient image data in a file.",
+        "Severity": "HIGH",
+        "References": [
+          "http://lists.opensuse.org/opensuse-security-announce/2019-06/msg00057.html",
+          "http://lists.opensuse.org/opensuse-security-announce/2019-07/msg00001.html",
+          "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-11470",
+          "https://github.com/ImageMagick/ImageMagick/commit/e3cdce6fe12193f235b8c0ae5efe6880a25eb957",
+          "https://github.com/ImageMagick/ImageMagick/issues/1472",
+          "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/PF62B5PJA2JDUOCKJGUQO3SPL74BEYSV/",
+          "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/WHIKB4TP6KBJWT2UIPWL5MWMG5QXKGEJ/",
+          "https://usn.ubuntu.com/4034-1/"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2019-19948",
+        "PkgName": "imagemagick-6.q16",
+        "InstalledVersion": "8:6.9.10.23+dfsg-2.1",
+        "Title": "ImageMagick: heap-based buffer overflow in WriteSGIImage in coders/sgi.c",
+        "Description": "In ImageMagick 7.0.8-43 Q16, there is a heap-based buffer overflow in the function WriteSGIImage of coders/sgi.c.",
+        "Severity": "HIGH",
+        "References": [
+          "http://lists.opensuse.org/opensuse-security-announce/2020-02/msg00006.html",
+          "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-19948",
+          "https://github.com/ImageMagick/ImageMagick/issues/1562",
+          "https://lists.debian.org/debian-lts-announce/2019/12/msg00033.html"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2019-19952",
+        "PkgName": "imagemagick-6.q16",
+        "InstalledVersion": "8:6.9.10.23+dfsg-2.1",
+        "Title": "ImageMagick: use-after-free in MngInfoDiscardObject in coders/png.c",
+        "Description": "In ImageMagick 7.0.9-7 Q16, there is a use-after-free in the function MngInfoDiscardObject of coders/png.c, related to ReadOneMNGImage.",
+        "Severity": "HIGH",
+        "References": [
+          "https://github.com/ImageMagick/ImageMagick/issues/1791"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2017-13716",
+        "PkgName": "libbinutils",
+        "InstalledVersion": "2.31.1-16",
+        "Title": "binutils: Memory leak with the C++ symbol demangler routine in libiberty",
+        "Description": "The C++ symbol demangler routine in cplus-dem.c in libiberty, as distributed in GNU Binutils 2.29, allows remote attackers to cause a denial of service (excessive memory allocation and application crash) via a crafted file, as demonstrated by a call from the Binary File Descriptor (BFD) library (aka libbfd).",
+        "Severity": "HIGH",
+        "References": [
+          "https://sourceware.org/bugzilla/show_bug.cgi?id=22009"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2018-12699",
+        "PkgName": "libbinutils",
+        "InstalledVersion": "2.31.1-16",
+        "Title": "binutils: heap-based buffer overflow in finish_stab in stabs.c",
+        "Description": "finish_stab in stabs.c in GNU Binutils 2.30 allows attackers to cause a denial of service (heap-based buffer overflow) or possibly have unspecified other impact, as demonstrated by an out-of-bounds write of 8 bytes. This can occur during execution of objdump.",
+        "Severity": "HIGH",
+        "References": [
+          "http://www.securityfocus.com/bid/104540",
+          "https://bugs.launchpad.net/ubuntu/+source/binutils/+bug/1763102",
+          "https://gcc.gnu.org/bugzilla/show_bug.cgi?id=85454",
+          "https://security.gentoo.org/glsa/201908-01",
+          "https://sourceware.org/bugzilla/show_bug.cgi?id=23057"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2019-1010022",
+        "PkgName": "libc-bin",
+        "InstalledVersion": "2.28-10",
+        "Title": "glibc: stack guard protection bypass",
+        "Description": "GNU Libc current is affected by: Mitigation bypass. The impact is: Attacker may bypass stack guard protection. The component is: nptl. The attack vector is: Exploit stack buffer overflow vulnerability and use this bypass vulnerability to bypass stack guard.",
+        "Severity": "HIGH",
+        "References": [
+          "https://sourceware.org/bugzilla/show_bug.cgi?id=22850"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2019-1010022",
+        "PkgName": "libc-dev-bin",
+        "InstalledVersion": "2.28-10",
+        "Title": "glibc: stack guard protection bypass",
+        "Description": "GNU Libc current is affected by: Mitigation bypass. The impact is: Attacker may bypass stack guard protection. The component is: nptl. The attack vector is: Exploit stack buffer overflow vulnerability and use this bypass vulnerability to bypass stack guard.",
+        "Severity": "HIGH",
+        "References": [
+          "https://sourceware.org/bugzilla/show_bug.cgi?id=22850"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2019-1010022",
+        "PkgName": "libc6",
+        "InstalledVersion": "2.28-10",
+        "Title": "glibc: stack guard protection bypass",
+        "Description": "GNU Libc current is affected by: Mitigation bypass. The impact is: Attacker may bypass stack guard protection. The component is: nptl. The attack vector is: Exploit stack buffer overflow vulnerability and use this bypass vulnerability to bypass stack guard.",
+        "Severity": "HIGH",
+        "References": [
+          "https://sourceware.org/bugzilla/show_bug.cgi?id=22850"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2019-1010022",
+        "PkgName": "libc6-dev",
+        "InstalledVersion": "2.28-10",
+        "Title": "glibc: stack guard protection bypass",
+        "Description": "GNU Libc current is affected by: Mitigation bypass. The impact is: Attacker may bypass stack guard protection. The component is: nptl. The attack vector is: Exploit stack buffer overflow vulnerability and use this bypass vulnerability to bypass stack guard.",
+        "Severity": "HIGH",
+        "References": [
+          "https://sourceware.org/bugzilla/show_bug.cgi?id=22850"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2017-8871",
+        "PkgName": "libcroco3",
+        "InstalledVersion": "0.6.12-3",
+        "Title": "libcroco: Infinite loop in the cr_parser_parse_selector_core function",
+        "Description": "The cr_parser_parse_selector_core function in cr-parser.c in libcroco 0.6.12 allows remote attackers to cause a denial of service (infinite loop and CPU consumption) via a crafted CSS file.",
+        "Severity": "HIGH",
+        "References": [
+          "http://lists.opensuse.org/opensuse-security-announce/2019-06/msg00043.html",
+          "https://bugzilla.gnome.org/show_bug.cgi?id=782649",
+          "https://www.exploit-db.com/exploits/42147/"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2019-5481",
+        "PkgName": "libcurl3-gnutls",
+        "InstalledVersion": "7.64.0-4",
+        "Title": "curl: double free due to subsequent call of realloc()",
+        "Description": "Double-free vulnerability in the FTP-kerberos code in cURL 7.52.0 to 7.65.3.",
+        "Severity": "HIGH",
+        "References": [
+          "http://lists.opensuse.org/opensuse-security-announce/2019-09/msg00048.html",
+          "http://lists.opensuse.org/opensuse-security-announce/2019-09/msg00055.html",
+          "https://curl.haxx.se/docs/CVE-2019-5481.html",
+          "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/RGDVKSLY5JUNJRLYRUA6CXGQ2LM63XC3/",
+          "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/UA7KDM2WPM5CJDDGOEGFV6SSGD2J7RNT/"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2019-5482",
+        "PkgName": "libcurl3-gnutls",
+        "InstalledVersion": "7.64.0-4",
+        "Title": "curl: heap buffer overflow in function tftp_receive_packet()",
+        "Description": "Heap buffer overflow in the TFTP protocol handler in cURL 7.19.4 to 7.65.3.",
+        "Severity": "HIGH",
+        "References": [
+          "http://lists.opensuse.org/opensuse-security-announce/2019-09/msg00048.html",
+          "http://lists.opensuse.org/opensuse-security-announce/2019-09/msg00055.html",
+          "https://curl.haxx.se/docs/CVE-2019-5482.html",
+          "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-5482",
+          "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/RGDVKSLY5JUNJRLYRUA6CXGQ2LM63XC3/",
+          "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/UA7KDM2WPM5CJDDGOEGFV6SSGD2J7RNT/"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2019-5481",
+        "PkgName": "libcurl4",
+        "InstalledVersion": "7.64.0-4",
+        "Title": "curl: double free due to subsequent call of realloc()",
+        "Description": "Double-free vulnerability in the FTP-kerberos code in cURL 7.52.0 to 7.65.3.",
+        "Severity": "HIGH",
+        "References": [
+          "http://lists.opensuse.org/opensuse-security-announce/2019-09/msg00048.html",
+          "http://lists.opensuse.org/opensuse-security-announce/2019-09/msg00055.html",
+          "https://curl.haxx.se/docs/CVE-2019-5481.html",
+          "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/RGDVKSLY5JUNJRLYRUA6CXGQ2LM63XC3/",
+          "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/UA7KDM2WPM5CJDDGOEGFV6SSGD2J7RNT/"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2019-5482",
+        "PkgName": "libcurl4",
+        "InstalledVersion": "7.64.0-4",
+        "Title": "curl: heap buffer overflow in function tftp_receive_packet()",
+        "Description": "Heap buffer overflow in the TFTP protocol handler in cURL 7.19.4 to 7.65.3.",
+        "Severity": "HIGH",
+        "References": [
+          "http://lists.opensuse.org/opensuse-security-announce/2019-09/msg00048.html",
+          "http://lists.opensuse.org/opensuse-security-announce/2019-09/msg00055.html",
+          "https://curl.haxx.se/docs/CVE-2019-5482.html",
+          "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-5482",
+          "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/RGDVKSLY5JUNJRLYRUA6CXGQ2LM63XC3/",
+          "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/UA7KDM2WPM5CJDDGOEGFV6SSGD2J7RNT/"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2019-5481",
+        "PkgName": "libcurl4-openssl-dev",
+        "InstalledVersion": "7.64.0-4",
+        "Title": "curl: double free due to subsequent call of realloc()",
+        "Description": "Double-free vulnerability in the FTP-kerberos code in cURL 7.52.0 to 7.65.3.",
+        "Severity": "HIGH",
+        "References": [
+          "http://lists.opensuse.org/opensuse-security-announce/2019-09/msg00048.html",
+          "http://lists.opensuse.org/opensuse-security-announce/2019-09/msg00055.html",
+          "https://curl.haxx.se/docs/CVE-2019-5481.html",
+          "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/RGDVKSLY5JUNJRLYRUA6CXGQ2LM63XC3/",
+          "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/UA7KDM2WPM5CJDDGOEGFV6SSGD2J7RNT/"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2019-5482",
+        "PkgName": "libcurl4-openssl-dev",
+        "InstalledVersion": "7.64.0-4",
+        "Title": "curl: heap buffer overflow in function tftp_receive_packet()",
+        "Description": "Heap buffer overflow in the TFTP protocol handler in cURL 7.19.4 to 7.65.3.",
+        "Severity": "HIGH",
+        "References": [
+          "http://lists.opensuse.org/opensuse-security-announce/2019-09/msg00048.html",
+          "http://lists.opensuse.org/opensuse-security-announce/2019-09/msg00055.html",
+          "https://curl.haxx.se/docs/CVE-2019-5482.html",
+          "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-5482",
+          "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/RGDVKSLY5JUNJRLYRUA6CXGQ2LM63XC3/",
+          "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/UA7KDM2WPM5CJDDGOEGFV6SSGD2J7RNT/"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2019-2201",
+        "PkgName": "libjpeg-dev",
+        "InstalledVersion": "1:1.5.2-2",
+        "Title": "libjpeg-turbo: several integer overflows and subsequent segfaults when attempting to compress/decompress gigapixel images",
+        "Description": "In generate_jsimd_ycc_rgb_convert_neon of jsimd_arm64_neon.S, there is a possible out of bounds write due to a missing bounds check. This could lead to remote code execution in an unprivileged process with no additional execution privileges needed. User interaction is needed for exploitation.Product: AndroidVersions: Android-8.0 Android-8.1 Android-9 Android-10Android ID: A-120551338",
+        "Severity": "CRITICAL",
+        "References": [
+          "http://lists.opensuse.org/opensuse-security-announce/2019-11/msg00047.html",
+          "http://lists.opensuse.org/opensuse-security-announce/2019-11/msg00048.html",
+          "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/Y4QPASQPZO644STRFTLOD35RIRGWWRNI/",
+          "https://source.android.com/security/bulletin/2019-11-01",
+          "https://usn.ubuntu.com/4190-1/"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2019-2201",
+        "PkgName": "libjpeg62-turbo",
+        "InstalledVersion": "1:1.5.2-2",
+        "Title": "libjpeg-turbo: several integer overflows and subsequent segfaults when attempting to compress/decompress gigapixel images",
+        "Description": "In generate_jsimd_ycc_rgb_convert_neon of jsimd_arm64_neon.S, there is a possible out of bounds write due to a missing bounds check. This could lead to remote code execution in an unprivileged process with no additional execution privileges needed. User interaction is needed for exploitation.Product: AndroidVersions: Android-8.0 Android-8.1 Android-9 Android-10Android ID: A-120551338",
+        "Severity": "CRITICAL",
+        "References": [
+          "http://lists.opensuse.org/opensuse-security-announce/2019-11/msg00047.html",
+          "http://lists.opensuse.org/opensuse-security-announce/2019-11/msg00048.html",
+          "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/Y4QPASQPZO644STRFTLOD35RIRGWWRNI/",
+          "https://source.android.com/security/bulletin/2019-11-01",
+          "https://usn.ubuntu.com/4190-1/"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2019-2201",
+        "PkgName": "libjpeg62-turbo-dev",
+        "InstalledVersion": "1:1.5.2-2",
+        "Title": "libjpeg-turbo: several integer overflows and subsequent segfaults when attempting to compress/decompress gigapixel images",
+        "Description": "In generate_jsimd_ycc_rgb_convert_neon of jsimd_arm64_neon.S, there is a possible out of bounds write due to a missing bounds check. This could lead to remote code execution in an unprivileged process with no additional execution privileges needed. User interaction is needed for exploitation.Product: AndroidVersions: Android-8.0 Android-8.1 Android-9 Android-10Android ID: A-120551338",
+        "Severity": "CRITICAL",
+        "References": [
+          "http://lists.opensuse.org/opensuse-security-announce/2019-11/msg00047.html",
+          "http://lists.opensuse.org/opensuse-security-announce/2019-11/msg00048.html",
+          "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/Y4QPASQPZO644STRFTLOD35RIRGWWRNI/",
+          "https://source.android.com/security/bulletin/2019-11-01",
+          "https://usn.ubuntu.com/4190-1/"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2018-15607",
+        "PkgName": "libmagickcore-6-arch-config",
+        "InstalledVersion": "8:6.9.10.23+dfsg-2.1",
+        "Title": "ImageMagick: CPU Exhaustion via crafted input file",
+        "Description": "In ImageMagick 7.0.8-11 Q16, a tiny input file 0x50 0x36 0x36 0x36 0x36 0x4c 0x36 0x38 0x36 0x36 0x36 0x36 0x36 0x36 0x1f 0x35 0x50 0x00 can result in a hang of several minutes during which CPU and memory resources are consumed until ultimately an attempted large memory allocation fails. Remote attackers could leverage this vulnerability to cause a denial of service via a crafted file.",
+        "Severity": "HIGH",
+        "References": [
+          "http://www.securityfocus.com/bid/105137",
+          "https://github.com/ImageMagick/ImageMagick/issues/1255",
+          "https://usn.ubuntu.com/4034-1/"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2019-11470",
+        "PkgName": "libmagickcore-6-arch-config",
+        "InstalledVersion": "8:6.9.10.23+dfsg-2.1",
+        "Title": "ImageMagick: denial of service in cineon parsing component",
+        "Description": "The cineon parsing component in ImageMagick 7.0.8-26 Q16 allows attackers to cause a denial-of-service (uncontrolled resource consumption) by crafting a Cineon image with an incorrect claimed image size. This occurs because ReadCINImage in coders/cin.c lacks a check for insufficient image data in a file.",
+        "Severity": "HIGH",
+        "References": [
+          "http://lists.opensuse.org/opensuse-security-announce/2019-06/msg00057.html",
+          "http://lists.opensuse.org/opensuse-security-announce/2019-07/msg00001.html",
+          "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-11470",
+          "https://github.com/ImageMagick/ImageMagick/commit/e3cdce6fe12193f235b8c0ae5efe6880a25eb957",
+          "https://github.com/ImageMagick/ImageMagick/issues/1472",
+          "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/PF62B5PJA2JDUOCKJGUQO3SPL74BEYSV/",
+          "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/WHIKB4TP6KBJWT2UIPWL5MWMG5QXKGEJ/",
+          "https://usn.ubuntu.com/4034-1/"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2019-19948",
+        "PkgName": "libmagickcore-6-arch-config",
+        "InstalledVersion": "8:6.9.10.23+dfsg-2.1",
+        "Title": "ImageMagick: heap-based buffer overflow in WriteSGIImage in coders/sgi.c",
+        "Description": "In ImageMagick 7.0.8-43 Q16, there is a heap-based buffer overflow in the function WriteSGIImage of coders/sgi.c.",
+        "Severity": "HIGH",
+        "References": [
+          "http://lists.opensuse.org/opensuse-security-announce/2020-02/msg00006.html",
+          "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-19948",
+          "https://github.com/ImageMagick/ImageMagick/issues/1562",
+          "https://lists.debian.org/debian-lts-announce/2019/12/msg00033.html"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2019-19952",
+        "PkgName": "libmagickcore-6-arch-config",
+        "InstalledVersion": "8:6.9.10.23+dfsg-2.1",
+        "Title": "ImageMagick: use-after-free in MngInfoDiscardObject in coders/png.c",
+        "Description": "In ImageMagick 7.0.9-7 Q16, there is a use-after-free in the function MngInfoDiscardObject of coders/png.c, related to ReadOneMNGImage.",
+        "Severity": "HIGH",
+        "References": [
+          "https://github.com/ImageMagick/ImageMagick/issues/1791"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2018-15607",
+        "PkgName": "libmagickcore-6-headers",
+        "InstalledVersion": "8:6.9.10.23+dfsg-2.1",
+        "Title": "ImageMagick: CPU Exhaustion via crafted input file",
+        "Description": "In ImageMagick 7.0.8-11 Q16, a tiny input file 0x50 0x36 0x36 0x36 0x36 0x4c 0x36 0x38 0x36 0x36 0x36 0x36 0x36 0x36 0x1f 0x35 0x50 0x00 can result in a hang of several minutes during which CPU and memory resources are consumed until ultimately an attempted large memory allocation fails. Remote attackers could leverage this vulnerability to cause a denial of service via a crafted file.",
+        "Severity": "HIGH",
+        "References": [
+          "http://www.securityfocus.com/bid/105137",
+          "https://github.com/ImageMagick/ImageMagick/issues/1255",
+          "https://usn.ubuntu.com/4034-1/"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2019-11470",
+        "PkgName": "libmagickcore-6-headers",
+        "InstalledVersion": "8:6.9.10.23+dfsg-2.1",
+        "Title": "ImageMagick: denial of service in cineon parsing component",
+        "Description": "The cineon parsing component in ImageMagick 7.0.8-26 Q16 allows attackers to cause a denial-of-service (uncontrolled resource consumption) by crafting a Cineon image with an incorrect claimed image size. This occurs because ReadCINImage in coders/cin.c lacks a check for insufficient image data in a file.",
+        "Severity": "HIGH",
+        "References": [
+          "http://lists.opensuse.org/opensuse-security-announce/2019-06/msg00057.html",
+          "http://lists.opensuse.org/opensuse-security-announce/2019-07/msg00001.html",
+          "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-11470",
+          "https://github.com/ImageMagick/ImageMagick/commit/e3cdce6fe12193f235b8c0ae5efe6880a25eb957",
+          "https://github.com/ImageMagick/ImageMagick/issues/1472",
+          "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/PF62B5PJA2JDUOCKJGUQO3SPL74BEYSV/",
+          "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/WHIKB4TP6KBJWT2UIPWL5MWMG5QXKGEJ/",
+          "https://usn.ubuntu.com/4034-1/"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2019-19948",
+        "PkgName": "libmagickcore-6-headers",
+        "InstalledVersion": "8:6.9.10.23+dfsg-2.1",
+        "Title": "ImageMagick: heap-based buffer overflow in WriteSGIImage in coders/sgi.c",
+        "Description": "In ImageMagick 7.0.8-43 Q16, there is a heap-based buffer overflow in the function WriteSGIImage of coders/sgi.c.",
+        "Severity": "HIGH",
+        "References": [
+          "http://lists.opensuse.org/opensuse-security-announce/2020-02/msg00006.html",
+          "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-19948",
+          "https://github.com/ImageMagick/ImageMagick/issues/1562",
+          "https://lists.debian.org/debian-lts-announce/2019/12/msg00033.html"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2019-19952",
+        "PkgName": "libmagickcore-6-headers",
+        "InstalledVersion": "8:6.9.10.23+dfsg-2.1",
+        "Title": "ImageMagick: use-after-free in MngInfoDiscardObject in coders/png.c",
+        "Description": "In ImageMagick 7.0.9-7 Q16, there is a use-after-free in the function MngInfoDiscardObject of coders/png.c, related to ReadOneMNGImage.",
+        "Severity": "HIGH",
+        "References": [
+          "https://github.com/ImageMagick/ImageMagick/issues/1791"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2018-15607",
+        "PkgName": "libmagickcore-6.q16-6",
+        "InstalledVersion": "8:6.9.10.23+dfsg-2.1",
+        "Title": "ImageMagick: CPU Exhaustion via crafted input file",
+        "Description": "In ImageMagick 7.0.8-11 Q16, a tiny input file 0x50 0x36 0x36 0x36 0x36 0x4c 0x36 0x38 0x36 0x36 0x36 0x36 0x36 0x36 0x1f 0x35 0x50 0x00 can result in a hang of several minutes during which CPU and memory resources are consumed until ultimately an attempted large memory allocation fails. Remote attackers could leverage this vulnerability to cause a denial of service via a crafted file.",
+        "Severity": "HIGH",
+        "References": [
+          "http://www.securityfocus.com/bid/105137",
+          "https://github.com/ImageMagick/ImageMagick/issues/1255",
+          "https://usn.ubuntu.com/4034-1/"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2019-11470",
+        "PkgName": "libmagickcore-6.q16-6",
+        "InstalledVersion": "8:6.9.10.23+dfsg-2.1",
+        "Title": "ImageMagick: denial of service in cineon parsing component",
+        "Description": "The cineon parsing component in ImageMagick 7.0.8-26 Q16 allows attackers to cause a denial-of-service (uncontrolled resource consumption) by crafting a Cineon image with an incorrect claimed image size. This occurs because ReadCINImage in coders/cin.c lacks a check for insufficient image data in a file.",
+        "Severity": "HIGH",
+        "References": [
+          "http://lists.opensuse.org/opensuse-security-announce/2019-06/msg00057.html",
+          "http://lists.opensuse.org/opensuse-security-announce/2019-07/msg00001.html",
+          "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-11470",
+          "https://github.com/ImageMagick/ImageMagick/commit/e3cdce6fe12193f235b8c0ae5efe6880a25eb957",
+          "https://github.com/ImageMagick/ImageMagick/issues/1472",
+          "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/PF62B5PJA2JDUOCKJGUQO3SPL74BEYSV/",
+          "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/WHIKB4TP6KBJWT2UIPWL5MWMG5QXKGEJ/",
+          "https://usn.ubuntu.com/4034-1/"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2019-19948",
+        "PkgName": "libmagickcore-6.q16-6",
+        "InstalledVersion": "8:6.9.10.23+dfsg-2.1",
+        "Title": "ImageMagick: heap-based buffer overflow in WriteSGIImage in coders/sgi.c",
+        "Description": "In ImageMagick 7.0.8-43 Q16, there is a heap-based buffer overflow in the function WriteSGIImage of coders/sgi.c.",
+        "Severity": "HIGH",
+        "References": [
+          "http://lists.opensuse.org/opensuse-security-announce/2020-02/msg00006.html",
+          "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-19948",
+          "https://github.com/ImageMagick/ImageMagick/issues/1562",
+          "https://lists.debian.org/debian-lts-announce/2019/12/msg00033.html"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2019-19952",
+        "PkgName": "libmagickcore-6.q16-6",
+        "InstalledVersion": "8:6.9.10.23+dfsg-2.1",
+        "Title": "ImageMagick: use-after-free in MngInfoDiscardObject in coders/png.c",
+        "Description": "In ImageMagick 7.0.9-7 Q16, there is a use-after-free in the function MngInfoDiscardObject of coders/png.c, related to ReadOneMNGImage.",
+        "Severity": "HIGH",
+        "References": [
+          "https://github.com/ImageMagick/ImageMagick/issues/1791"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2018-15607",
+        "PkgName": "libmagickcore-6.q16-6-extra",
+        "InstalledVersion": "8:6.9.10.23+dfsg-2.1",
+        "Title": "ImageMagick: CPU Exhaustion via crafted input file",
+        "Description": "In ImageMagick 7.0.8-11 Q16, a tiny input file 0x50 0x36 0x36 0x36 0x36 0x4c 0x36 0x38 0x36 0x36 0x36 0x36 0x36 0x36 0x1f 0x35 0x50 0x00 can result in a hang of several minutes during which CPU and memory resources are consumed until ultimately an attempted large memory allocation fails. Remote attackers could leverage this vulnerability to cause a denial of service via a crafted file.",
+        "Severity": "HIGH",
+        "References": [
+          "http://www.securityfocus.com/bid/105137",
+          "https://github.com/ImageMagick/ImageMagick/issues/1255",
+          "https://usn.ubuntu.com/4034-1/"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2019-11470",
+        "PkgName": "libmagickcore-6.q16-6-extra",
+        "InstalledVersion": "8:6.9.10.23+dfsg-2.1",
+        "Title": "ImageMagick: denial of service in cineon parsing component",
+        "Description": "The cineon parsing component in ImageMagick 7.0.8-26 Q16 allows attackers to cause a denial-of-service (uncontrolled resource consumption) by crafting a Cineon image with an incorrect claimed image size. This occurs because ReadCINImage in coders/cin.c lacks a check for insufficient image data in a file.",
+        "Severity": "HIGH",
+        "References": [
+          "http://lists.opensuse.org/opensuse-security-announce/2019-06/msg00057.html",
+          "http://lists.opensuse.org/opensuse-security-announce/2019-07/msg00001.html",
+          "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-11470",
+          "https://github.com/ImageMagick/ImageMagick/commit/e3cdce6fe12193f235b8c0ae5efe6880a25eb957",
+          "https://github.com/ImageMagick/ImageMagick/issues/1472",
+          "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/PF62B5PJA2JDUOCKJGUQO3SPL74BEYSV/",
+          "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/WHIKB4TP6KBJWT2UIPWL5MWMG5QXKGEJ/",
+          "https://usn.ubuntu.com/4034-1/"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2019-19948",
+        "PkgName": "libmagickcore-6.q16-6-extra",
+        "InstalledVersion": "8:6.9.10.23+dfsg-2.1",
+        "Title": "ImageMagick: heap-based buffer overflow in WriteSGIImage in coders/sgi.c",
+        "Description": "In ImageMagick 7.0.8-43 Q16, there is a heap-based buffer overflow in the function WriteSGIImage of coders/sgi.c.",
+        "Severity": "HIGH",
+        "References": [
+          "http://lists.opensuse.org/opensuse-security-announce/2020-02/msg00006.html",
+          "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-19948",
+          "https://github.com/ImageMagick/ImageMagick/issues/1562",
+          "https://lists.debian.org/debian-lts-announce/2019/12/msg00033.html"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2019-19952",
+        "PkgName": "libmagickcore-6.q16-6-extra",
+        "InstalledVersion": "8:6.9.10.23+dfsg-2.1",
+        "Title": "ImageMagick: use-after-free in MngInfoDiscardObject in coders/png.c",
+        "Description": "In ImageMagick 7.0.9-7 Q16, there is a use-after-free in the function MngInfoDiscardObject of coders/png.c, related to ReadOneMNGImage.",
+        "Severity": "HIGH",
+        "References": [
+          "https://github.com/ImageMagick/ImageMagick/issues/1791"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2018-15607",
+        "PkgName": "libmagickcore-6.q16-dev",
+        "InstalledVersion": "8:6.9.10.23+dfsg-2.1",
+        "Title": "ImageMagick: CPU Exhaustion via crafted input file",
+        "Description": "In ImageMagick 7.0.8-11 Q16, a tiny input file 0x50 0x36 0x36 0x36 0x36 0x4c 0x36 0x38 0x36 0x36 0x36 0x36 0x36 0x36 0x1f 0x35 0x50 0x00 can result in a hang of several minutes during which CPU and memory resources are consumed until ultimately an attempted large memory allocation fails. Remote attackers could leverage this vulnerability to cause a denial of service via a crafted file.",
+        "Severity": "HIGH",
+        "References": [
+          "http://www.securityfocus.com/bid/105137",
+          "https://github.com/ImageMagick/ImageMagick/issues/1255",
+          "https://usn.ubuntu.com/4034-1/"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2019-11470",
+        "PkgName": "libmagickcore-6.q16-dev",
+        "InstalledVersion": "8:6.9.10.23+dfsg-2.1",
+        "Title": "ImageMagick: denial of service in cineon parsing component",
+        "Description": "The cineon parsing component in ImageMagick 7.0.8-26 Q16 allows attackers to cause a denial-of-service (uncontrolled resource consumption) by crafting a Cineon image with an incorrect claimed image size. This occurs because ReadCINImage in coders/cin.c lacks a check for insufficient image data in a file.",
+        "Severity": "HIGH",
+        "References": [
+          "http://lists.opensuse.org/opensuse-security-announce/2019-06/msg00057.html",
+          "http://lists.opensuse.org/opensuse-security-announce/2019-07/msg00001.html",
+          "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-11470",
+          "https://github.com/ImageMagick/ImageMagick/commit/e3cdce6fe12193f235b8c0ae5efe6880a25eb957",
+          "https://github.com/ImageMagick/ImageMagick/issues/1472",
+          "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/PF62B5PJA2JDUOCKJGUQO3SPL74BEYSV/",
+          "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/WHIKB4TP6KBJWT2UIPWL5MWMG5QXKGEJ/",
+          "https://usn.ubuntu.com/4034-1/"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2019-19948",
+        "PkgName": "libmagickcore-6.q16-dev",
+        "InstalledVersion": "8:6.9.10.23+dfsg-2.1",
+        "Title": "ImageMagick: heap-based buffer overflow in WriteSGIImage in coders/sgi.c",
+        "Description": "In ImageMagick 7.0.8-43 Q16, there is a heap-based buffer overflow in the function WriteSGIImage of coders/sgi.c.",
+        "Severity": "HIGH",
+        "References": [
+          "http://lists.opensuse.org/opensuse-security-announce/2020-02/msg00006.html",
+          "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-19948",
+          "https://github.com/ImageMagick/ImageMagick/issues/1562",
+          "https://lists.debian.org/debian-lts-announce/2019/12/msg00033.html"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2019-19952",
+        "PkgName": "libmagickcore-6.q16-dev",
+        "InstalledVersion": "8:6.9.10.23+dfsg-2.1",
+        "Title": "ImageMagick: use-after-free in MngInfoDiscardObject in coders/png.c",
+        "Description": "In ImageMagick 7.0.9-7 Q16, there is a use-after-free in the function MngInfoDiscardObject of coders/png.c, related to ReadOneMNGImage.",
+        "Severity": "HIGH",
+        "References": [
+          "https://github.com/ImageMagick/ImageMagick/issues/1791"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2018-15607",
+        "PkgName": "libmagickcore-dev",
+        "InstalledVersion": "8:6.9.10.23+dfsg-2.1",
+        "Title": "ImageMagick: CPU Exhaustion via crafted input file",
+        "Description": "In ImageMagick 7.0.8-11 Q16, a tiny input file 0x50 0x36 0x36 0x36 0x36 0x4c 0x36 0x38 0x36 0x36 0x36 0x36 0x36 0x36 0x1f 0x35 0x50 0x00 can result in a hang of several minutes during which CPU and memory resources are consumed until ultimately an attempted large memory allocation fails. Remote attackers could leverage this vulnerability to cause a denial of service via a crafted file.",
+        "Severity": "HIGH",
+        "References": [
+          "http://www.securityfocus.com/bid/105137",
+          "https://github.com/ImageMagick/ImageMagick/issues/1255",
+          "https://usn.ubuntu.com/4034-1/"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2019-11470",
+        "PkgName": "libmagickcore-dev",
+        "InstalledVersion": "8:6.9.10.23+dfsg-2.1",
+        "Title": "ImageMagick: denial of service in cineon parsing component",
+        "Description": "The cineon parsing component in ImageMagick 7.0.8-26 Q16 allows attackers to cause a denial-of-service (uncontrolled resource consumption) by crafting a Cineon image with an incorrect claimed image size. This occurs because ReadCINImage in coders/cin.c lacks a check for insufficient image data in a file.",
+        "Severity": "HIGH",
+        "References": [
+          "http://lists.opensuse.org/opensuse-security-announce/2019-06/msg00057.html",
+          "http://lists.opensuse.org/opensuse-security-announce/2019-07/msg00001.html",
+          "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-11470",
+          "https://github.com/ImageMagick/ImageMagick/commit/e3cdce6fe12193f235b8c0ae5efe6880a25eb957",
+          "https://github.com/ImageMagick/ImageMagick/issues/1472",
+          "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/PF62B5PJA2JDUOCKJGUQO3SPL74BEYSV/",
+          "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/WHIKB4TP6KBJWT2UIPWL5MWMG5QXKGEJ/",
+          "https://usn.ubuntu.com/4034-1/"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2019-19948",
+        "PkgName": "libmagickcore-dev",
+        "InstalledVersion": "8:6.9.10.23+dfsg-2.1",
+        "Title": "ImageMagick: heap-based buffer overflow in WriteSGIImage in coders/sgi.c",
+        "Description": "In ImageMagick 7.0.8-43 Q16, there is a heap-based buffer overflow in the function WriteSGIImage of coders/sgi.c.",
+        "Severity": "HIGH",
+        "References": [
+          "http://lists.opensuse.org/opensuse-security-announce/2020-02/msg00006.html",
+          "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-19948",
+          "https://github.com/ImageMagick/ImageMagick/issues/1562",
+          "https://lists.debian.org/debian-lts-announce/2019/12/msg00033.html"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2019-19952",
+        "PkgName": "libmagickcore-dev",
+        "InstalledVersion": "8:6.9.10.23+dfsg-2.1",
+        "Title": "ImageMagick: use-after-free in MngInfoDiscardObject in coders/png.c",
+        "Description": "In ImageMagick 7.0.9-7 Q16, there is a use-after-free in the function MngInfoDiscardObject of coders/png.c, related to ReadOneMNGImage.",
+        "Severity": "HIGH",
+        "References": [
+          "https://github.com/ImageMagick/ImageMagick/issues/1791"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2018-15607",
+        "PkgName": "libmagickwand-6-headers",
+        "InstalledVersion": "8:6.9.10.23+dfsg-2.1",
+        "Title": "ImageMagick: CPU Exhaustion via crafted input file",
+        "Description": "In ImageMagick 7.0.8-11 Q16, a tiny input file 0x50 0x36 0x36 0x36 0x36 0x4c 0x36 0x38 0x36 0x36 0x36 0x36 0x36 0x36 0x1f 0x35 0x50 0x00 can result in a hang of several minutes during which CPU and memory resources are consumed until ultimately an attempted large memory allocation fails. Remote attackers could leverage this vulnerability to cause a denial of service via a crafted file.",
+        "Severity": "HIGH",
+        "References": [
+          "http://www.securityfocus.com/bid/105137",
+          "https://github.com/ImageMagick/ImageMagick/issues/1255",
+          "https://usn.ubuntu.com/4034-1/"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2019-11470",
+        "PkgName": "libmagickwand-6-headers",
+        "InstalledVersion": "8:6.9.10.23+dfsg-2.1",
+        "Title": "ImageMagick: denial of service in cineon parsing component",
+        "Description": "The cineon parsing component in ImageMagick 7.0.8-26 Q16 allows attackers to cause a denial-of-service (uncontrolled resource consumption) by crafting a Cineon image with an incorrect claimed image size. This occurs because ReadCINImage in coders/cin.c lacks a check for insufficient image data in a file.",
+        "Severity": "HIGH",
+        "References": [
+          "http://lists.opensuse.org/opensuse-security-announce/2019-06/msg00057.html",
+          "http://lists.opensuse.org/opensuse-security-announce/2019-07/msg00001.html",
+          "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-11470",
+          "https://github.com/ImageMagick/ImageMagick/commit/e3cdce6fe12193f235b8c0ae5efe6880a25eb957",
+          "https://github.com/ImageMagick/ImageMagick/issues/1472",
+          "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/PF62B5PJA2JDUOCKJGUQO3SPL74BEYSV/",
+          "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/WHIKB4TP6KBJWT2UIPWL5MWMG5QXKGEJ/",
+          "https://usn.ubuntu.com/4034-1/"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2019-19948",
+        "PkgName": "libmagickwand-6-headers",
+        "InstalledVersion": "8:6.9.10.23+dfsg-2.1",
+        "Title": "ImageMagick: heap-based buffer overflow in WriteSGIImage in coders/sgi.c",
+        "Description": "In ImageMagick 7.0.8-43 Q16, there is a heap-based buffer overflow in the function WriteSGIImage of coders/sgi.c.",
+        "Severity": "HIGH",
+        "References": [
+          "http://lists.opensuse.org/opensuse-security-announce/2020-02/msg00006.html",
+          "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-19948",
+          "https://github.com/ImageMagick/ImageMagick/issues/1562",
+          "https://lists.debian.org/debian-lts-announce/2019/12/msg00033.html"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2019-19952",
+        "PkgName": "libmagickwand-6-headers",
+        "InstalledVersion": "8:6.9.10.23+dfsg-2.1",
+        "Title": "ImageMagick: use-after-free in MngInfoDiscardObject in coders/png.c",
+        "Description": "In ImageMagick 7.0.9-7 Q16, there is a use-after-free in the function MngInfoDiscardObject of coders/png.c, related to ReadOneMNGImage.",
+        "Severity": "HIGH",
+        "References": [
+          "https://github.com/ImageMagick/ImageMagick/issues/1791"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2018-15607",
+        "PkgName": "libmagickwand-6.q16-6",
+        "InstalledVersion": "8:6.9.10.23+dfsg-2.1",
+        "Title": "ImageMagick: CPU Exhaustion via crafted input file",
+        "Description": "In ImageMagick 7.0.8-11 Q16, a tiny input file 0x50 0x36 0x36 0x36 0x36 0x4c 0x36 0x38 0x36 0x36 0x36 0x36 0x36 0x36 0x1f 0x35 0x50 0x00 can result in a hang of several minutes during which CPU and memory resources are consumed until ultimately an attempted large memory allocation fails. Remote attackers could leverage this vulnerability to cause a denial of service via a crafted file.",
+        "Severity": "HIGH",
+        "References": [
+          "http://www.securityfocus.com/bid/105137",
+          "https://github.com/ImageMagick/ImageMagick/issues/1255",
+          "https://usn.ubuntu.com/4034-1/"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2019-11470",
+        "PkgName": "libmagickwand-6.q16-6",
+        "InstalledVersion": "8:6.9.10.23+dfsg-2.1",
+        "Title": "ImageMagick: denial of service in cineon parsing component",
+        "Description": "The cineon parsing component in ImageMagick 7.0.8-26 Q16 allows attackers to cause a denial-of-service (uncontrolled resource consumption) by crafting a Cineon image with an incorrect claimed image size. This occurs because ReadCINImage in coders/cin.c lacks a check for insufficient image data in a file.",
+        "Severity": "HIGH",
+        "References": [
+          "http://lists.opensuse.org/opensuse-security-announce/2019-06/msg00057.html",
+          "http://lists.opensuse.org/opensuse-security-announce/2019-07/msg00001.html",
+          "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-11470",
+          "https://github.com/ImageMagick/ImageMagick/commit/e3cdce6fe12193f235b8c0ae5efe6880a25eb957",
+          "https://github.com/ImageMagick/ImageMagick/issues/1472",
+          "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/PF62B5PJA2JDUOCKJGUQO3SPL74BEYSV/",
+          "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/WHIKB4TP6KBJWT2UIPWL5MWMG5QXKGEJ/",
+          "https://usn.ubuntu.com/4034-1/"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2019-19948",
+        "PkgName": "libmagickwand-6.q16-6",
+        "InstalledVersion": "8:6.9.10.23+dfsg-2.1",
+        "Title": "ImageMagick: heap-based buffer overflow in WriteSGIImage in coders/sgi.c",
+        "Description": "In ImageMagick 7.0.8-43 Q16, there is a heap-based buffer overflow in the function WriteSGIImage of coders/sgi.c.",
+        "Severity": "HIGH",
+        "References": [
+          "http://lists.opensuse.org/opensuse-security-announce/2020-02/msg00006.html",
+          "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-19948",
+          "https://github.com/ImageMagick/ImageMagick/issues/1562",
+          "https://lists.debian.org/debian-lts-announce/2019/12/msg00033.html"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2019-19952",
+        "PkgName": "libmagickwand-6.q16-6",
+        "InstalledVersion": "8:6.9.10.23+dfsg-2.1",
+        "Title": "ImageMagick: use-after-free in MngInfoDiscardObject in coders/png.c",
+        "Description": "In ImageMagick 7.0.9-7 Q16, there is a use-after-free in the function MngInfoDiscardObject of coders/png.c, related to ReadOneMNGImage.",
+        "Severity": "HIGH",
+        "References": [
+          "https://github.com/ImageMagick/ImageMagick/issues/1791"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2018-15607",
+        "PkgName": "libmagickwand-6.q16-dev",
+        "InstalledVersion": "8:6.9.10.23+dfsg-2.1",
+        "Title": "ImageMagick: CPU Exhaustion via crafted input file",
+        "Description": "In ImageMagick 7.0.8-11 Q16, a tiny input file 0x50 0x36 0x36 0x36 0x36 0x4c 0x36 0x38 0x36 0x36 0x36 0x36 0x36 0x36 0x1f 0x35 0x50 0x00 can result in a hang of several minutes during which CPU and memory resources are consumed until ultimately an attempted large memory allocation fails. Remote attackers could leverage this vulnerability to cause a denial of service via a crafted file.",
+        "Severity": "HIGH",
+        "References": [
+          "http://www.securityfocus.com/bid/105137",
+          "https://github.com/ImageMagick/ImageMagick/issues/1255",
+          "https://usn.ubuntu.com/4034-1/"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2019-11470",
+        "PkgName": "libmagickwand-6.q16-dev",
+        "InstalledVersion": "8:6.9.10.23+dfsg-2.1",
+        "Title": "ImageMagick: denial of service in cineon parsing component",
+        "Description": "The cineon parsing component in ImageMagick 7.0.8-26 Q16 allows attackers to cause a denial-of-service (uncontrolled resource consumption) by crafting a Cineon image with an incorrect claimed image size. This occurs because ReadCINImage in coders/cin.c lacks a check for insufficient image data in a file.",
+        "Severity": "HIGH",
+        "References": [
+          "http://lists.opensuse.org/opensuse-security-announce/2019-06/msg00057.html",
+          "http://lists.opensuse.org/opensuse-security-announce/2019-07/msg00001.html",
+          "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-11470",
+          "https://github.com/ImageMagick/ImageMagick/commit/e3cdce6fe12193f235b8c0ae5efe6880a25eb957",
+          "https://github.com/ImageMagick/ImageMagick/issues/1472",
+          "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/PF62B5PJA2JDUOCKJGUQO3SPL74BEYSV/",
+          "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/WHIKB4TP6KBJWT2UIPWL5MWMG5QXKGEJ/",
+          "https://usn.ubuntu.com/4034-1/"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2019-19948",
+        "PkgName": "libmagickwand-6.q16-dev",
+        "InstalledVersion": "8:6.9.10.23+dfsg-2.1",
+        "Title": "ImageMagick: heap-based buffer overflow in WriteSGIImage in coders/sgi.c",
+        "Description": "In ImageMagick 7.0.8-43 Q16, there is a heap-based buffer overflow in the function WriteSGIImage of coders/sgi.c.",
+        "Severity": "HIGH",
+        "References": [
+          "http://lists.opensuse.org/opensuse-security-announce/2020-02/msg00006.html",
+          "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-19948",
+          "https://github.com/ImageMagick/ImageMagick/issues/1562",
+          "https://lists.debian.org/debian-lts-announce/2019/12/msg00033.html"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2019-19952",
+        "PkgName": "libmagickwand-6.q16-dev",
+        "InstalledVersion": "8:6.9.10.23+dfsg-2.1",
+        "Title": "ImageMagick: use-after-free in MngInfoDiscardObject in coders/png.c",
+        "Description": "In ImageMagick 7.0.9-7 Q16, there is a use-after-free in the function MngInfoDiscardObject of coders/png.c, related to ReadOneMNGImage.",
+        "Severity": "HIGH",
+        "References": [
+          "https://github.com/ImageMagick/ImageMagick/issues/1791"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2018-15607",
+        "PkgName": "libmagickwand-dev",
+        "InstalledVersion": "8:6.9.10.23+dfsg-2.1",
+        "Title": "ImageMagick: CPU Exhaustion via crafted input file",
+        "Description": "In ImageMagick 7.0.8-11 Q16, a tiny input file 0x50 0x36 0x36 0x36 0x36 0x4c 0x36 0x38 0x36 0x36 0x36 0x36 0x36 0x36 0x1f 0x35 0x50 0x00 can result in a hang of several minutes during which CPU and memory resources are consumed until ultimately an attempted large memory allocation fails. Remote attackers could leverage this vulnerability to cause a denial of service via a crafted file.",
+        "Severity": "HIGH",
+        "References": [
+          "http://www.securityfocus.com/bid/105137",
+          "https://github.com/ImageMagick/ImageMagick/issues/1255",
+          "https://usn.ubuntu.com/4034-1/"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2019-11470",
+        "PkgName": "libmagickwand-dev",
+        "InstalledVersion": "8:6.9.10.23+dfsg-2.1",
+        "Title": "ImageMagick: denial of service in cineon parsing component",
+        "Description": "The cineon parsing component in ImageMagick 7.0.8-26 Q16 allows attackers to cause a denial-of-service (uncontrolled resource consumption) by crafting a Cineon image with an incorrect claimed image size. This occurs because ReadCINImage in coders/cin.c lacks a check for insufficient image data in a file.",
+        "Severity": "HIGH",
+        "References": [
+          "http://lists.opensuse.org/opensuse-security-announce/2019-06/msg00057.html",
+          "http://lists.opensuse.org/opensuse-security-announce/2019-07/msg00001.html",
+          "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-11470",
+          "https://github.com/ImageMagick/ImageMagick/commit/e3cdce6fe12193f235b8c0ae5efe6880a25eb957",
+          "https://github.com/ImageMagick/ImageMagick/issues/1472",
+          "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/PF62B5PJA2JDUOCKJGUQO3SPL74BEYSV/",
+          "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/WHIKB4TP6KBJWT2UIPWL5MWMG5QXKGEJ/",
+          "https://usn.ubuntu.com/4034-1/"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2019-19948",
+        "PkgName": "libmagickwand-dev",
+        "InstalledVersion": "8:6.9.10.23+dfsg-2.1",
+        "Title": "ImageMagick: heap-based buffer overflow in WriteSGIImage in coders/sgi.c",
+        "Description": "In ImageMagick 7.0.8-43 Q16, there is a heap-based buffer overflow in the function WriteSGIImage of coders/sgi.c.",
+        "Severity": "HIGH",
+        "References": [
+          "http://lists.opensuse.org/opensuse-security-announce/2020-02/msg00006.html",
+          "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-19948",
+          "https://github.com/ImageMagick/ImageMagick/issues/1562",
+          "https://lists.debian.org/debian-lts-announce/2019/12/msg00033.html"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2019-19952",
+        "PkgName": "libmagickwand-dev",
+        "InstalledVersion": "8:6.9.10.23+dfsg-2.1",
+        "Title": "ImageMagick: use-after-free in MngInfoDiscardObject in coders/png.c",
+        "Description": "In ImageMagick 7.0.9-7 Q16, there is a use-after-free in the function MngInfoDiscardObject of coders/png.c, related to ReadOneMNGImage.",
+        "Severity": "HIGH",
+        "References": [
+          "https://github.com/ImageMagick/ImageMagick/issues/1791"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2017-17479",
+        "PkgName": "libopenjp2-7",
+        "InstalledVersion": "2.3.0-2",
+        "Title": "openjpeg: Stack-buffer overflow in the pgxtoimage function",
+        "Description": "In OpenJPEG 2.3.0, a stack-based buffer overflow was discovered in the pgxtoimage function in jpwl/convert.c. The vulnerability causes an out-of-bounds write, which may lead to remote denial of service or possibly remote code execution.",
+        "Severity": "HIGH",
+        "References": [
+          "https://github.com/uclouvain/openjpeg/issues/1044"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2018-7648",
+        "PkgName": "libopenjp2-7",
+        "InstalledVersion": "2.3.0-2",
+        "Description": "An issue was discovered in mj2/opj_mj2_extract.c in OpenJPEG 2.3.0. The output prefix was not checked for length, which could overflow a buffer, when providing a prefix with 50 or more characters on the command line.",
+        "Severity": "HIGH",
+        "References": [
+          "https://github.com/kbabioch/openjpeg/commit/6d8c0c06ee32dc03ba80acd48334e98728e56cf5",
+          "https://github.com/uclouvain/openjpeg/issues/1088"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2017-17479",
+        "PkgName": "libopenjp2-7-dev",
+        "InstalledVersion": "2.3.0-2",
+        "Title": "openjpeg: Stack-buffer overflow in the pgxtoimage function",
+        "Description": "In OpenJPEG 2.3.0, a stack-based buffer overflow was discovered in the pgxtoimage function in jpwl/convert.c. The vulnerability causes an out-of-bounds write, which may lead to remote denial of service or possibly remote code execution.",
+        "Severity": "HIGH",
+        "References": [
+          "https://github.com/uclouvain/openjpeg/issues/1044"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2018-7648",
+        "PkgName": "libopenjp2-7-dev",
+        "InstalledVersion": "2.3.0-2",
+        "Description": "An issue was discovered in mj2/opj_mj2_extract.c in OpenJPEG 2.3.0. The output prefix was not checked for length, which could overflow a buffer, when providing a prefix with 50 or more characters on the command line.",
+        "Severity": "HIGH",
+        "References": [
+          "https://github.com/kbabioch/openjpeg/commit/6d8c0c06ee32dc03ba80acd48334e98728e56cf5",
+          "https://github.com/uclouvain/openjpeg/issues/1088"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2017-11164",
+        "PkgName": "libpcre16-3",
+        "InstalledVersion": "2:8.39-12",
+        "Title": "pcre: OP_KETRMAX feature in the match function in pcre_exec.c",
+        "Description": "In PCRE 8.41, the OP_KETRMAX feature in the match function in pcre_exec.c allows stack exhaustion (uncontrolled recursion) when processing a crafted regular expression.",
+        "Severity": "HIGH",
+        "References": [
+          "http://openwall.com/lists/oss-security/2017/07/11/3",
+          "http://www.securityfocus.com/bid/99575"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2017-11164",
+        "PkgName": "libpcre3",
+        "InstalledVersion": "2:8.39-12",
+        "Title": "pcre: OP_KETRMAX feature in the match function in pcre_exec.c",
+        "Description": "In PCRE 8.41, the OP_KETRMAX feature in the match function in pcre_exec.c allows stack exhaustion (uncontrolled recursion) when processing a crafted regular expression.",
+        "Severity": "HIGH",
+        "References": [
+          "http://openwall.com/lists/oss-security/2017/07/11/3",
+          "http://www.securityfocus.com/bid/99575"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2017-11164",
+        "PkgName": "libpcre3-dev",
+        "InstalledVersion": "2:8.39-12",
+        "Title": "pcre: OP_KETRMAX feature in the match function in pcre_exec.c",
+        "Description": "In PCRE 8.41, the OP_KETRMAX feature in the match function in pcre_exec.c allows stack exhaustion (uncontrolled recursion) when processing a crafted regular expression.",
+        "Severity": "HIGH",
+        "References": [
+          "http://openwall.com/lists/oss-security/2017/07/11/3",
+          "http://www.securityfocus.com/bid/99575"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2017-11164",
+        "PkgName": "libpcre32-3",
+        "InstalledVersion": "2:8.39-12",
+        "Title": "pcre: OP_KETRMAX feature in the match function in pcre_exec.c",
+        "Description": "In PCRE 8.41, the OP_KETRMAX feature in the match function in pcre_exec.c allows stack exhaustion (uncontrolled recursion) when processing a crafted regular expression.",
+        "Severity": "HIGH",
+        "References": [
+          "http://openwall.com/lists/oss-security/2017/07/11/3",
+          "http://www.securityfocus.com/bid/99575"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2017-11164",
+        "PkgName": "libpcrecpp0v5",
+        "InstalledVersion": "2:8.39-12",
+        "Title": "pcre: OP_KETRMAX feature in the match function in pcre_exec.c",
+        "Description": "In PCRE 8.41, the OP_KETRMAX feature in the match function in pcre_exec.c allows stack exhaustion (uncontrolled recursion) when processing a crafted regular expression.",
+        "Severity": "HIGH",
+        "References": [
+          "http://openwall.com/lists/oss-security/2017/07/11/3",
+          "http://www.securityfocus.com/bid/99575"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2019-9193",
+        "PkgName": "libpq-dev",
+        "InstalledVersion": "11.5-1+deb10u1",
+        "Title": "postgresql: Command injection via \"COPY TO/FROM PROGRAM\" function",
+        "Description": "** DISPUTED ** In PostgreSQL 9.3 through 11.2, the \"COPY TO/FROM PROGRAM\" function allows superusers and users in the 'pg_execute_server_program' group to execute arbitrary code in the context of the database's operating system user. This functionality is enabled by default and can be abused to run arbitrary operating system commands on Windows, Linux, and macOS. NOTE: Third parties claim/state this is not an issue because PostgreSQL functionality for ?COPY TO/FROM PROGRAM? is acting as intended. References state that in PostgreSQL, a superuser can execute commands as the server user without using the ?COPY FROM PROGRAM?.",
+        "Severity": "CRITICAL",
+        "References": [
+          "http://packetstormsecurity.com/files/152757/PostgreSQL-COPY-FROM-PROGRAM-Command-Execution.html",
+          "https://blog.hagander.net/when-a-vulnerability-is-not-a-vulnerability-244/",
+          "https://medium.com/greenwolf-security/authenticated-arbitrary-command-execution-on-postgresql-9-3-latest-cd18945914d5",
+          "https://paquier.xyz/postgresql-2/postgres-9-3-feature-highlight-copy-tofrom-program/",
+          "https://security.netapp.com/advisory/ntap-20190502-0003/",
+          "https://www.postgresql.org/about/news/1935/",
+          "https://www.trustwave.com/en-us/resources/blogs/spiderlabs-blog/authenticated-arbitrary-command-execution-on-postgresql-9-3/"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2019-9193",
+        "PkgName": "libpq5",
+        "InstalledVersion": "11.5-1+deb10u1",
+        "Title": "postgresql: Command injection via \"COPY TO/FROM PROGRAM\" function",
+        "Description": "** DISPUTED ** In PostgreSQL 9.3 through 11.2, the \"COPY TO/FROM PROGRAM\" function allows superusers and users in the 'pg_execute_server_program' group to execute arbitrary code in the context of the database's operating system user. This functionality is enabled by default and can be abused to run arbitrary operating system commands on Windows, Linux, and macOS. NOTE: Third parties claim/state this is not an issue because PostgreSQL functionality for ?COPY TO/FROM PROGRAM? is acting as intended. References state that in PostgreSQL, a superuser can execute commands as the server user without using the ?COPY FROM PROGRAM?.",
+        "Severity": "CRITICAL",
+        "References": [
+          "http://packetstormsecurity.com/files/152757/PostgreSQL-COPY-FROM-PROGRAM-Command-Execution.html",
+          "https://blog.hagander.net/when-a-vulnerability-is-not-a-vulnerability-244/",
+          "https://medium.com/greenwolf-security/authenticated-arbitrary-command-execution-on-postgresql-9-3-latest-cd18945914d5",
+          "https://paquier.xyz/postgresql-2/postgres-9-3-feature-highlight-copy-tofrom-program/",
+          "https://security.netapp.com/advisory/ntap-20190502-0003/",
+          "https://www.postgresql.org/about/news/1935/",
+          "https://www.trustwave.com/en-us/resources/blogs/spiderlabs-blog/authenticated-arbitrary-command-execution-on-postgresql-9-3/"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2008-4108",
+        "PkgName": "libpython-stdlib",
+        "InstalledVersion": "2.7.16-1",
+        "Title": "python: Generic FAQ wizard moving tool insecure auxiliary /tmp file usage (symlink attack possible)",
+        "Description": "Tools/faqwiz/move-faqwiz.sh (aka the generic FAQ wizard moving tool) in Python 2.4.5 might allow local users to overwrite arbitrary files via a symlink attack on a tmp$RANDOM.tmp temporary file.  NOTE: there may not be common usage scenarios in which tmp$RANDOM.tmp is located in an untrusted directory.",
+        "Severity": "HIGH",
+        "References": [
+          "http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=498899",
+          "http://marc.info/?l=oss-security\u0026m=122148330903513\u0026w=2",
+          "http://marc.info/?l=oss-security\u0026m=122152861617434\u0026w=2",
+          "http://securityreason.com/securityalert/4274",
+          "http://www.securityfocus.com/bid/31184",
+          "http://www.securitytracker.com/id?1020904",
+          "http://www.vupen.com/english/advisories/2008/2659",
+          "https://bugzilla.redhat.com/show_bug.cgi?id=462326",
+          "https://exchange.xforce.ibmcloud.com/vulnerabilities/45161"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2008-4108",
+        "PkgName": "libpython2-stdlib",
+        "InstalledVersion": "2.7.16-1",
+        "Title": "python: Generic FAQ wizard moving tool insecure auxiliary /tmp file usage (symlink attack possible)",
+        "Description": "Tools/faqwiz/move-faqwiz.sh (aka the generic FAQ wizard moving tool) in Python 2.4.5 might allow local users to overwrite arbitrary files via a symlink attack on a tmp$RANDOM.tmp temporary file.  NOTE: there may not be common usage scenarios in which tmp$RANDOM.tmp is located in an untrusted directory.",
+        "Severity": "HIGH",
+        "References": [
+          "http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=498899",
+          "http://marc.info/?l=oss-security\u0026m=122148330903513\u0026w=2",
+          "http://marc.info/?l=oss-security\u0026m=122152861617434\u0026w=2",
+          "http://securityreason.com/securityalert/4274",
+          "http://www.securityfocus.com/bid/31184",
+          "http://www.securitytracker.com/id?1020904",
+          "http://www.vupen.com/english/advisories/2008/2659",
+          "https://bugzilla.redhat.com/show_bug.cgi?id=462326",
+          "https://exchange.xforce.ibmcloud.com/vulnerabilities/45161"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2019-9674",
+        "PkgName": "libpython2.7-minimal",
+        "InstalledVersion": "2.7.16-2+deb10u1",
+        "Title": "python: Nested zip file (Zip bomb) vulnerability in Lib/zipfile.py",
+        "Description": "Lib/zipfile.py in Python through 3.7.2 allows remote attackers to cause a denial of service (resource consumption) via a ZIP bomb.",
+        "Severity": "HIGH",
+        "References": [
+          "https://bugs.python.org/issue36260",
+          "https://bugs.python.org/issue36462",
+          "https://github.com/python/cpython/blob/master/Lib/zipfile.py",
+          "https://python-security.readthedocs.io/security.html#archives-and-zip-bomb",
+          "https://www.python.org/news/security/"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2019-9674",
+        "PkgName": "libpython2.7-stdlib",
+        "InstalledVersion": "2.7.16-2+deb10u1",
+        "Title": "python: Nested zip file (Zip bomb) vulnerability in Lib/zipfile.py",
+        "Description": "Lib/zipfile.py in Python through 3.7.2 allows remote attackers to cause a denial of service (resource consumption) via a ZIP bomb.",
+        "Severity": "HIGH",
+        "References": [
+          "https://bugs.python.org/issue36260",
+          "https://bugs.python.org/issue36462",
+          "https://github.com/python/cpython/blob/master/Lib/zipfile.py",
+          "https://python-security.readthedocs.io/security.html#archives-and-zip-bomb",
+          "https://www.python.org/news/security/"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2019-9674",
+        "PkgName": "libpython3.7-minimal",
+        "InstalledVersion": "3.7.3-2",
+        "Title": "python: Nested zip file (Zip bomb) vulnerability in Lib/zipfile.py",
+        "Description": "Lib/zipfile.py in Python through 3.7.2 allows remote attackers to cause a denial of service (resource consumption) via a ZIP bomb.",
+        "Severity": "HIGH",
+        "References": [
+          "https://bugs.python.org/issue36260",
+          "https://bugs.python.org/issue36462",
+          "https://github.com/python/cpython/blob/master/Lib/zipfile.py",
+          "https://python-security.readthedocs.io/security.html#archives-and-zip-bomb",
+          "https://www.python.org/news/security/"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2019-9674",
+        "PkgName": "libpython3.7-stdlib",
+        "InstalledVersion": "3.7.3-2",
+        "Title": "python: Nested zip file (Zip bomb) vulnerability in Lib/zipfile.py",
+        "Description": "Lib/zipfile.py in Python through 3.7.2 allows remote attackers to cause a denial of service (resource consumption) via a ZIP bomb.",
+        "Severity": "HIGH",
+        "References": [
+          "https://bugs.python.org/issue36260",
+          "https://bugs.python.org/issue36462",
+          "https://github.com/python/cpython/blob/master/Lib/zipfile.py",
+          "https://python-security.readthedocs.io/security.html#archives-and-zip-bomb",
+          "https://www.python.org/news/security/"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2019-9893",
+        "PkgName": "libseccomp2",
+        "InstalledVersion": "2.3.3-4",
+        "Title": "libseccomp: incorrect generation of syscall filters in libseccomp",
+        "Description": "libseccomp before 2.4.0 did not correctly generate 64-bit syscall argument comparisons using the arithmetic operators (LT, GT, LE, GE), which might able to lead to bypassing seccomp filters and potential privilege escalations.",
+        "Severity": "HIGH",
+        "References": [
+          "http://linux.oracle.com/cve/CVE-2019-9893.html",
+          "http://linux.oracle.com/errata/ELSA-2019-3624.html",
+          "https://github.com/seccomp/libseccomp/issues/139",
+          "https://seclists.org/oss-sec/2019/q1/179",
+          "https://security.gentoo.org/glsa/201904-18",
+          "https://usn.ubuntu.com/4001-1/",
+          "https://usn.ubuntu.com/4001-2/"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2020-1712",
+        "PkgName": "libsystemd0",
+        "InstalledVersion": "241-7~deb10u2",
+        "Title": "systemd: use-after-free when asynchronous polkit queries are performed",
+        "Description": "A heap use-after-free vulnerability was found in systemd, where asynchronous Polkit queries are performed while handling dbus messages. A local unprivileged attacker can abuse this flaw to crash systemd services or potentially execute code and elevate their privileges, by sending specially crafted dbus messages.",
+        "Severity": "HIGH"
+      },
+      {
+        "VulnerabilityID": "CVE-2018-1000654",
+        "PkgName": "libtasn1-6",
+        "InstalledVersion": "4.13-3",
+        "Title": "libtasn1: Infinite loop in _asn1_expand_object_id(ptree) leads to memory exhaustion",
+        "Description": "GNU Libtasn1-4.13 libtasn1-4.13 version libtasn1-4.13, libtasn1-4.12 contains a DoS, specifically CPU usage will reach 100% when running asn1Paser against the POC due to an issue in _asn1_expand_object_id(p_tree), after a long time, the program will be killed. This attack appears to be exploitable via parsing a crafted file.",
+        "Severity": "HIGH",
+        "References": [
+          "http://lists.opensuse.org/opensuse-security-announce/2019-06/msg00009.html",
+          "http://lists.opensuse.org/opensuse-security-announce/2019-06/msg00018.html",
+          "http://www.securityfocus.com/bid/105151",
+          "https://gitlab.com/gnutls/libtasn1/issues/4"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2018-1000654",
+        "PkgName": "libtasn1-6-dev",
+        "InstalledVersion": "4.13-3",
+        "Title": "libtasn1: Infinite loop in _asn1_expand_object_id(ptree) leads to memory exhaustion",
+        "Description": "GNU Libtasn1-4.13 libtasn1-4.13 version libtasn1-4.13, libtasn1-4.12 contains a DoS, specifically CPU usage will reach 100% when running asn1Paser against the POC due to an issue in _asn1_expand_object_id(p_tree), after a long time, the program will be killed. This attack appears to be exploitable via parsing a crafted file.",
+        "Severity": "HIGH",
+        "References": [
+          "http://lists.opensuse.org/opensuse-security-announce/2019-06/msg00009.html",
+          "http://lists.opensuse.org/opensuse-security-announce/2019-06/msg00018.html",
+          "http://www.securityfocus.com/bid/105151",
+          "https://gitlab.com/gnutls/libtasn1/issues/4"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2017-9117",
+        "PkgName": "libtiff-dev",
+        "InstalledVersion": "4.1.0+git191117-2~deb10u1",
+        "Title": "libtiff: Heap-based buffer over-read in bmp2tiff",
+        "Description": "In LibTIFF 4.0.7, the program processes BMP images without verifying that biWidth and biHeight in the bitmap-information header match the actual input, leading to a heap-based buffer over-read in bmp2tiff.",
+        "Severity": "HIGH",
+        "References": [
+          "http://bugzilla.maptools.org/show_bug.cgi?id=2690",
+          "http://www.securityfocus.com/bid/98581",
+          "https://usn.ubuntu.com/3606-1/"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2017-9117",
+        "PkgName": "libtiff5",
+        "InstalledVersion": "4.1.0+git191117-2~deb10u1",
+        "Title": "libtiff: Heap-based buffer over-read in bmp2tiff",
+        "Description": "In LibTIFF 4.0.7, the program processes BMP images without verifying that biWidth and biHeight in the bitmap-information header match the actual input, leading to a heap-based buffer over-read in bmp2tiff.",
+        "Severity": "HIGH",
+        "References": [
+          "http://bugzilla.maptools.org/show_bug.cgi?id=2690",
+          "http://www.securityfocus.com/bid/98581",
+          "https://usn.ubuntu.com/3606-1/"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2017-9117",
+        "PkgName": "libtiffxx5",
+        "InstalledVersion": "4.1.0+git191117-2~deb10u1",
+        "Title": "libtiff: Heap-based buffer over-read in bmp2tiff",
+        "Description": "In LibTIFF 4.0.7, the program processes BMP images without verifying that biWidth and biHeight in the bitmap-information header match the actual input, leading to a heap-based buffer over-read in bmp2tiff.",
+        "Severity": "HIGH",
+        "References": [
+          "http://bugzilla.maptools.org/show_bug.cgi?id=2690",
+          "http://www.securityfocus.com/bid/98581",
+          "https://usn.ubuntu.com/3606-1/"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2020-1712",
+        "PkgName": "libudev1",
+        "InstalledVersion": "241-7~deb10u2",
+        "Title": "systemd: use-after-free when asynchronous polkit queries are performed",
+        "Description": "A heap use-after-free vulnerability was found in systemd, where asynchronous Polkit queries are performed while handling dbus messages. A local unprivileged attacker can abuse this flaw to crash systemd services or potentially execute code and elevate their privileges, by sending specially crafted dbus messages.",
+        "Severity": "HIGH"
+      },
+      {
+        "VulnerabilityID": "CVE-2016-9085",
+        "PkgName": "libwebp-dev",
+        "InstalledVersion": "0.6.1-2",
+        "Title": "libwebp: Several integer overflows",
+        "Description": "Multiple integer overflows in libwebp allows attackers to have unspecified impact via unknown vectors.",
+        "Severity": "HIGH",
+        "References": [
+          "http://www.openwall.com/lists/oss-security/2016/10/27/3",
+          "http://www.securityfocus.com/bid/93928",
+          "https://bugzilla.redhat.com/show_bug.cgi?id=1389338",
+          "https://chromium.googlesource.com/webm/libwebp/+/e2affacc35f1df6cc3b1a9fa0ceff5ce2d0cce83",
+          "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/LG5Q42J7EJDKQKWTTHCO4YZMOMP74YPQ/",
+          "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/PTR2ZW67TMT7KC24RBENIF25KWUJ7VPD/",
+          "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/SH6X3MWD5AHZC5JT4625PGFHAYLR7YW7/",
+          "https://security.gentoo.org/glsa/201701-61"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2016-9085",
+        "PkgName": "libwebp6",
+        "InstalledVersion": "0.6.1-2",
+        "Title": "libwebp: Several integer overflows",
+        "Description": "Multiple integer overflows in libwebp allows attackers to have unspecified impact via unknown vectors.",
+        "Severity": "HIGH",
+        "References": [
+          "http://www.openwall.com/lists/oss-security/2016/10/27/3",
+          "http://www.securityfocus.com/bid/93928",
+          "https://bugzilla.redhat.com/show_bug.cgi?id=1389338",
+          "https://chromium.googlesource.com/webm/libwebp/+/e2affacc35f1df6cc3b1a9fa0ceff5ce2d0cce83",
+          "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/LG5Q42J7EJDKQKWTTHCO4YZMOMP74YPQ/",
+          "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/PTR2ZW67TMT7KC24RBENIF25KWUJ7VPD/",
+          "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/SH6X3MWD5AHZC5JT4625PGFHAYLR7YW7/",
+          "https://security.gentoo.org/glsa/201701-61"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2016-9085",
+        "PkgName": "libwebpdemux2",
+        "InstalledVersion": "0.6.1-2",
+        "Title": "libwebp: Several integer overflows",
+        "Description": "Multiple integer overflows in libwebp allows attackers to have unspecified impact via unknown vectors.",
+        "Severity": "HIGH",
+        "References": [
+          "http://www.openwall.com/lists/oss-security/2016/10/27/3",
+          "http://www.securityfocus.com/bid/93928",
+          "https://bugzilla.redhat.com/show_bug.cgi?id=1389338",
+          "https://chromium.googlesource.com/webm/libwebp/+/e2affacc35f1df6cc3b1a9fa0ceff5ce2d0cce83",
+          "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/LG5Q42J7EJDKQKWTTHCO4YZMOMP74YPQ/",
+          "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/PTR2ZW67TMT7KC24RBENIF25KWUJ7VPD/",
+          "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/SH6X3MWD5AHZC5JT4625PGFHAYLR7YW7/",
+          "https://security.gentoo.org/glsa/201701-61"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2016-9085",
+        "PkgName": "libwebpmux3",
+        "InstalledVersion": "0.6.1-2",
+        "Title": "libwebp: Several integer overflows",
+        "Description": "Multiple integer overflows in libwebp allows attackers to have unspecified impact via unknown vectors.",
+        "Severity": "HIGH",
+        "References": [
+          "http://www.openwall.com/lists/oss-security/2016/10/27/3",
+          "http://www.securityfocus.com/bid/93928",
+          "https://bugzilla.redhat.com/show_bug.cgi?id=1389338",
+          "https://chromium.googlesource.com/webm/libwebp/+/e2affacc35f1df6cc3b1a9fa0ceff5ce2d0cce83",
+          "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/LG5Q42J7EJDKQKWTTHCO4YZMOMP74YPQ/",
+          "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/PTR2ZW67TMT7KC24RBENIF25KWUJ7VPD/",
+          "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/SH6X3MWD5AHZC5JT4625PGFHAYLR7YW7/",
+          "https://security.gentoo.org/glsa/201701-61"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2009-3546",
+        "PkgName": "libwmf-dev",
+        "InstalledVersion": "0.2.8.4-14",
+        "Title": "gd: insufficient input validation in _gdGetColors()",
+        "Description": "The _gdGetColors function in gd_gd.c in PHP 5.2.11 and 5.3.x before 5.3.1, and the GD Graphics Library 2.x, does not properly verify a certain colorsTotal structure member, which might allow remote attackers to conduct buffer overflow or buffer over-read attacks via a crafted GD file, a different vulnerability than CVE-2009-3293. NOTE: some of these details are obtained from third party information.",
+        "Severity": "CRITICAL",
+        "References": [
+          "http://linux.oracle.com/cve/CVE-2009-3546.html",
+          "http://linux.oracle.com/errata/ELSA-2010-0040.html",
+          "http://marc.info/?l=oss-security\u0026m=125562113503923\u0026w=2",
+          "http://secunia.com/advisories/37069",
+          "http://secunia.com/advisories/37080",
+          "http://secunia.com/advisories/38055",
+          "http://svn.php.net/viewvc?view=revision\u0026revision=289557",
+          "http://www.mandriva.com/security/advisories?name=MDVSA-2009:285",
+          "http://www.openwall.com/lists/oss-security/2009/11/20/5",
+          "http://www.redhat.com/support/errata/RHSA-2010-0003.html",
+          "http://www.securityfocus.com/bid/36712",
+          "http://www.vupen.com/english/advisories/2009/2929",
+          "http://www.vupen.com/english/advisories/2009/2930",
+          "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2009-3546",
+          "https://oval.cisecurity.org/repository/search/definition/oval%3Aorg.mitre.oval%3Adef%3A11199"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2009-3546",
+        "PkgName": "libwmf0.2-7",
+        "InstalledVersion": "0.2.8.4-14",
+        "Title": "gd: insufficient input validation in _gdGetColors()",
+        "Description": "The _gdGetColors function in gd_gd.c in PHP 5.2.11 and 5.3.x before 5.3.1, and the GD Graphics Library 2.x, does not properly verify a certain colorsTotal structure member, which might allow remote attackers to conduct buffer overflow or buffer over-read attacks via a crafted GD file, a different vulnerability than CVE-2009-3293. NOTE: some of these details are obtained from third party information.",
+        "Severity": "CRITICAL",
+        "References": [
+          "http://linux.oracle.com/cve/CVE-2009-3546.html",
+          "http://linux.oracle.com/errata/ELSA-2010-0040.html",
+          "http://marc.info/?l=oss-security\u0026m=125562113503923\u0026w=2",
+          "http://secunia.com/advisories/37069",
+          "http://secunia.com/advisories/37080",
+          "http://secunia.com/advisories/38055",
+          "http://svn.php.net/viewvc?view=revision\u0026revision=289557",
+          "http://www.mandriva.com/security/advisories?name=MDVSA-2009:285",
+          "http://www.openwall.com/lists/oss-security/2009/11/20/5",
+          "http://www.redhat.com/support/errata/RHSA-2010-0003.html",
+          "http://www.securityfocus.com/bid/36712",
+          "http://www.vupen.com/english/advisories/2009/2929",
+          "http://www.vupen.com/english/advisories/2009/2930",
+          "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2009-3546",
+          "https://oval.cisecurity.org/repository/search/definition/oval%3Aorg.mitre.oval%3Adef%3A11199"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2012-2663",
+        "PkgName": "libxtables12",
+        "InstalledVersion": "1.8.2-4",
+        "Title": "iptables: --syn flag bypass",
+        "Description": "extensions/libxt_tcp.c in iptables through 1.4.21 does not match TCP SYN+FIN packets in --syn rules, which might allow remote attackers to bypass intended firewall restrictions via crafted packets.  NOTE: the CVE-2012-6638 fix makes this issue less relevant.",
+        "Severity": "HIGH",
+        "References": [
+          "http://www.spinics.net/lists/netfilter-devel/msg21248.html",
+          "https://bugzilla.redhat.com/show_bug.cgi?id=826702"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2019-10220",
+        "PkgName": "linux-libc-dev",
+        "InstalledVersion": "4.19.67-2+deb10u2",
+        "FixedVersion": "4.19.98-1",
+        "Title": "kernel: CIFS: Relative paths injection in directory entry lists",
+        "Description": "Linux kernel CIFS implementation, version 4.9.0 is vulnerable to a relative paths injection in directory entry lists.",
+        "Severity": "CRITICAL",
+        "References": [
+          "https://bugzilla.redhat.com/show_bug.cgi?id=CVE-2019-10220",
+          "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-10220",
+          "https://security.netapp.com/advisory/ntap-20200103-0001/",
+          "https://usn.ubuntu.com/4226-1/"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2019-14896",
+        "PkgName": "linux-libc-dev",
+        "InstalledVersion": "4.19.67-2+deb10u2",
+        "FixedVersion": "4.19.98-1",
+        "Title": "kernel: heap-based buffer overflow in lbs_ibss_join_existing function in drivers/net/wireless/marvell/libertas/cfg.c",
+        "Description": "A heap-based buffer overflow vulnerability was found in the Linux kernel, version kernel-2.6.32, in Marvell WiFi chip driver. A remote attacker could cause a denial of service (system crash) or, possibly execute arbitrary code, when the lbs_ibss_join_existing function is called after a STA connects to an AP.",
+        "Severity": "CRITICAL",
+        "References": [
+          "http://packetstormsecurity.com/files/155879/Kernel-Live-Patch-Security-Notice-LSN-0061-1.html",
+          "https://bugzilla.redhat.com/show_bug.cgi?id=CVE-2019-14896",
+          "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-14896",
+          "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/D4ISVNIC44SOGXTUBCIZFSUNQJ5LRKNZ/",
+          "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/MN6MLCN7G7VFTSXSZYXKXEFCUMFBUAXQ/",
+          "https://security.netapp.com/advisory/ntap-20200103-0001/",
+          "https://usn.ubuntu.com/4225-1/",
+          "https://usn.ubuntu.com/4226-1/",
+          "https://usn.ubuntu.com/4227-1/",
+          "https://usn.ubuntu.com/4227-2/",
+          "https://usn.ubuntu.com/4228-1/",
+          "https://usn.ubuntu.com/4228-2/"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2019-14901",
+        "PkgName": "linux-libc-dev",
+        "InstalledVersion": "4.19.67-2+deb10u2",
+        "FixedVersion": "4.19.98-1",
+        "Title": "kernel: heap overflow in marvell/mwifiex/tdls.c",
+        "Description": "A heap overflow flaw was found in the Linux kernel, all versions 3.x.x and 4.x.x before 4.18.0, in Marvell WiFi chip driver. The vulnerability allows a remote attacker to cause a system crash, resulting in a denial of service, or execute arbitrary code. The highest threat with this vulnerability is with the availability of the system. If code execution occurs, the code will run with the permissions of root. This will affect both confidentiality and integrity of files on the system.",
+        "Severity": "CRITICAL",
+        "References": [
+          "http://linux.oracle.com/cve/CVE-2019-14901.html",
+          "http://linux.oracle.com/errata/ELSA-2020-0374.html",
+          "http://lists.opensuse.org/opensuse-security-announce/2019-12/msg00029.html",
+          "https://bugzilla.redhat.com/show_bug.cgi?id=CVE-2019-14901",
+          "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-14901",
+          "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/D4ISVNIC44SOGXTUBCIZFSUNQJ5LRKNZ/",
+          "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/MN6MLCN7G7VFTSXSZYXKXEFCUMFBUAXQ/"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2019-15504",
+        "PkgName": "linux-libc-dev",
+        "InstalledVersion": "4.19.67-2+deb10u2",
+        "FixedVersion": "4.19.87-1",
+        "Title": "kernel: double free in drivers/net/wireless/rsi/rsi_91x_usb.c via crafted USB device",
+        "Description": "drivers/net/wireless/rsi/rsi_91x_usb.c in the Linux kernel through 5.2.9 has a Double Free via crafted USB device traffic (which may be remote via usbip or usbredir).",
+        "Severity": "CRITICAL",
+        "References": [
+          "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-15504",
+          "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/O3RUDQJXRJQVGHCGR4YZWTQ3ECBI7TXH/",
+          "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/T4JZ6AEUKFWBHQAROGMQARJ274PQP2QP/",
+          "https://lore.kernel.org/lkml/20190819220230.10597-1-benquike@gmail.com/",
+          "https://security.netapp.com/advisory/ntap-20190905-0002/"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2019-15505",
+        "PkgName": "linux-libc-dev",
+        "InstalledVersion": "4.19.67-2+deb10u2",
+        "FixedVersion": "4.19.87-1",
+        "Title": "kernel: out of bounds read in drivers/media/usb/dvb-usb/technisat-usb2.c",
+        "Description": "drivers/media/usb/dvb-usb/technisat-usb2.c in the Linux kernel through 5.2.9 has an out-of-bounds read via crafted USB device traffic (which may be remote via usbip or usbredir).",
+        "Severity": "CRITICAL",
+        "References": [
+          "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-15505",
+          "https://git.linuxtv.org/media_tree.git/commit/?id=0c4df39e504bf925ab666132ac3c98d6cbbe380b",
+          "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/O3RUDQJXRJQVGHCGR4YZWTQ3ECBI7TXH/",
+          "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/T4JZ6AEUKFWBHQAROGMQARJ274PQP2QP/",
+          "https://lore.kernel.org/linux-media/20190821104408.w7krumcglxo6fz5q@gofer.mess.org/",
+          "https://lore.kernel.org/lkml/b9b256cb-95f2-5fa1-9956-5a602a017c11@gmail.com/",
+          "https://security.netapp.com/advisory/ntap-20190905-0002/"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2019-19813",
+        "PkgName": "linux-libc-dev",
+        "InstalledVersion": "4.19.67-2+deb10u2",
+        "Title": "kernel: use-after-free in __mutex_lock in kernel/locking/mutex.c",
+        "Description": "In the Linux kernel 5.0.21, mounting a crafted btrfs filesystem image, performing some operations, and then making a syncfs system call can lead to a use-after-free in __mutex_lock in kernel/locking/mutex.c. This is related to mutex_can_spin_on_owner in kernel/locking/mutex.c, __btrfs_qgroup_free_meta in fs/btrfs/qgroup.c, and btrfs_insert_delayed_items in fs/btrfs/delayed-inode.c.",
+        "Severity": "CRITICAL",
+        "References": [
+          "https://github.com/bobfuzzer/CVE/tree/master/CVE-2019-19813",
+          "https://security.netapp.com/advisory/ntap-20200103-0001/"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2019-19814",
+        "PkgName": "linux-libc-dev",
+        "InstalledVersion": "4.19.67-2+deb10u2",
+        "Title": "kernel: out-of-bounds write in __remove_dirty_segment in fs/f2fs/segment.c",
+        "Description": "In the Linux kernel 5.0.21, mounting a crafted f2fs filesystem image can cause __remove_dirty_segment slab-out-of-bounds write access because an array is bounded by the number of dirty types (8) but the array index can exceed this.",
+        "Severity": "CRITICAL",
+        "References": [
+          "https://github.com/bobfuzzer/CVE/tree/master/CVE-2019-19814",
+          "https://security.netapp.com/advisory/ntap-20200103-0001/"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2019-19816",
+        "PkgName": "linux-libc-dev",
+        "InstalledVersion": "4.19.67-2+deb10u2",
+        "Title": "kernel: out-of-bounds write in __btrfs_map_block in fs/btrfs/volumes.c",
+        "Description": "In the Linux kernel 5.0.21, mounting a crafted btrfs filesystem image and performing some operations can cause slab-out-of-bounds write access in __btrfs_map_block in fs/btrfs/volumes.c, because a value of 1 for the number of data stripes is mishandled.",
+        "Severity": "CRITICAL",
+        "References": [
+          "https://github.com/bobfuzzer/CVE/tree/master/CVE-2019-19816",
+          "https://security.netapp.com/advisory/ntap-20200103-0001/"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2008-4609",
+        "PkgName": "linux-libc-dev",
+        "InstalledVersion": "4.19.67-2+deb10u2",
+        "Title": "kernel: TCP protocol vulnerabilities from Outpost24",
+        "Description": "The TCP implementation in (1) Linux, (2) platforms based on BSD Unix, (3) Microsoft Windows, (4) Cisco products, and probably other operating systems allows remote attackers to cause a denial of service (connection queue exhaustion) via multiple vectors that manipulate information in the TCP state table, as demonstrated by sockstress.",
+        "Severity": "HIGH",
+        "References": [
+          "http://blog.robertlee.name/2008/10/conjecture-speculation.html",
+          "http://insecure.org/stf/tcp-dos-attack-explained.html",
+          "http://lists.immunitysec.com/pipermail/dailydave/2008-October/005360.html",
+          "http://marc.info/?l=bugtraq\u0026m=125856010926699\u0026w=2",
+          "http://searchsecurity.techtarget.com.au/articles/27154-TCP-is-fundamentally-borked",
+          "http://www.cisco.com/en/US/products/products_security_advisory09186a0080af511d.shtml",
+          "http://www.cisco.com/en/US/products/products_security_response09186a0080a15120.html",
+          "http://www.cpni.gov.uk/Docs/tn-03-09-security-assessment-TCP.pdf",
+          "http://www.mandriva.com/security/advisories?name=MDVSA-2013:150",
+          "http://www.oracle.com/technetwork/topics/security/cpujul2012-392727.html",
+          "http://www.outpost24.com/news/news-2008-10-02.html",
+          "http://www.us-cert.gov/cas/techalerts/TA09-251A.html",
+          "https://docs.microsoft.com/en-us/security-updates/securitybulletins/2009/ms09-048",
+          "https://oval.cisecurity.org/repository/search/definition/oval%3Aorg.mitre.oval%3Adef%3A6340",
+          "https://www.cert.fi/haavoittuvuudet/2008/tcp-vulnerabilities.html"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2013-7445",
+        "PkgName": "linux-libc-dev",
+        "InstalledVersion": "4.19.67-2+deb10u2",
+        "Title": "kernel: memory exhaustion via crafted Graphics Execution Manager (GEM) objects",
+        "Description": "The Direct Rendering Manager (DRM) subsystem in the Linux kernel through 4.x mishandles requests for Graphics Execution Manager (GEM) objects, which allows context-dependent attackers to cause a denial of service (memory consumption) via an application that processes graphics data, as demonstrated by JavaScript code that creates many CANVAS elements for rendering by Chrome or Firefox.",
+        "Severity": "HIGH",
+        "References": [
+          "https://bugzilla.kernel.org/show_bug.cgi?id=60533"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2018-20669",
+        "PkgName": "linux-libc-dev",
+        "InstalledVersion": "4.19.67-2+deb10u2",
+        "Title": "kernel: missing access_ok() checks in i915_gem_execbuffer2_ioctl() results in priviledge escalation",
+        "Description": "An issue where a provided address with access_ok() is not checked was discovered in i915_gem_execbuffer2_ioctl in drivers/gpu/drm/i915/i915_gem_execbuffer.c in the Linux kernel through 4.19.13. A local attacker can craft a malicious IOCTL function call to overwrite arbitrary kernel memory, resulting in a Denial of Service or privilege escalation.",
+        "Severity": "HIGH",
+        "References": [
+          "http://git.kernel.org/cgit/linux/kernel/git/torvalds/linux.git/log/drivers/gpu/drm/i915/i915_gem_execbuffer.c",
+          "http://lists.opensuse.org/opensuse-security-announce/2019-02/msg00042.html",
+          "http://www.openwall.com/lists/oss-security/2019/01/23/6",
+          "http://www.securityfocus.com/bid/106748",
+          "https://access.redhat.com/security/cve/cve-2018-20669",
+          "https://security.netapp.com/advisory/ntap-20190404-0002/",
+          "https://support.f5.com/csp/article/K32059550"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2019-12456",
+        "PkgName": "linux-libc-dev",
+        "InstalledVersion": "4.19.67-2+deb10u2",
+        "Title": "kernel: double fetch in the MPT3COMMAND case in _ctl_ioctl_main in drivers/scsi/mpt3sas/mpt3sas_ctl.c",
+        "Description": "** DISPUTED ** An issue was discovered in the MPT3COMMAND case in _ctl_ioctl_main in drivers/scsi/mpt3sas/mpt3sas_ctl.c in the Linux kernel through 5.1.5. It allows local users to cause a denial of service or possibly have unspecified other impact by changing the value of ioc_number between two kernel reads of that value, aka a \"double fetch\" vulnerability. NOTE: a third party reports that this is unexploitable because the doubly fetched value is not used.",
+        "Severity": "HIGH",
+        "References": [
+          "http://lists.opensuse.org/opensuse-security-announce/2019-06/msg00039.html",
+          "http://lists.opensuse.org/opensuse-security-announce/2019-06/msg00040.html",
+          "http://lists.opensuse.org/opensuse-security-announce/2019-06/msg00048.html",
+          "https://bugzilla.redhat.com/show_bug.cgi?id=1717182",
+          "https://git.kernel.org/pub/scm/linux/kernel/git/mkp/scsi.git/commit/?h=5.3/scsi-queue\u0026id=86e5aca7fa2927060839f3e3b40c8bd65a7e8d1e",
+          "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/MDURACJVGIBIYBSGDZJTRDPX46H5WPZW/",
+          "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/OBJHGQXA4PQ5EOGCOXEH3KFDNVZ2I4X7/",
+          "https://lkml.org/lkml/2019/5/29/1164"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2019-12614",
+        "PkgName": "linux-libc-dev",
+        "InstalledVersion": "4.19.67-2+deb10u2",
+        "FixedVersion": "4.19.98-1",
+        "Title": "kernel: null pointer dereference in dlpar_parse_cc_property in arch/powerrc/platforms/pseries/dlpar.c causing denial of service",
+        "Description": "An issue was discovered in dlpar_parse_cc_property in arch/powerpc/platforms/pseries/dlpar.c in the Linux kernel through 5.1.6. There is an unchecked kstrdup of prop-\u003ename, which might allow an attacker to cause a denial of service (NULL pointer dereference and system crash).",
+        "Severity": "HIGH",
+        "References": [
+          "http://www.securityfocus.com/bid/108550",
+          "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-12614",
+          "https://git.kernel.org/pub/scm/linux/kernel/git/powerpc/linux.git/commit/?id=efa9ace68e487ddd29c2b4d6dd23242158f1f607",
+          "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/MDURACJVGIBIYBSGDZJTRDPX46H5WPZW/",
+          "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/OBJHGQXA4PQ5EOGCOXEH3KFDNVZ2I4X7/",
+          "https://lkml.org/lkml/2019/6/3/526"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2019-12615",
+        "PkgName": "linux-libc-dev",
+        "InstalledVersion": "4.19.67-2+deb10u2",
+        "Title": "kernel: null pointer dereference in get_vdev_port_node_info in arch /sparc/kernel/mdesc.c",
+        "Description": "An issue was discovered in get_vdev_port_node_info in arch/sparc/kernel/mdesc.c in the Linux kernel through 5.1.6. There is an unchecked kstrdup_const of node_info-\u003evdev_port.name, which might allow an attacker to cause a denial of service (NULL pointer dereference and system crash).",
+        "Severity": "HIGH",
+        "References": [
+          "http://www.securityfocus.com/bid/108549",
+          "https://git.kernel.org/pub/scm/linux/kernel/git/davem/sparc.git/commit/?id=80caf43549e7e41a695c6d1e11066286538b336f",
+          "https://security.netapp.com/advisory/ntap-20190710-0002/",
+          "https://www.mail-archive.com/linux-kernel@vger.kernel.org/msg2014901.html"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2019-14814",
+        "PkgName": "linux-libc-dev",
+        "InstalledVersion": "4.19.67-2+deb10u2",
+        "FixedVersion": "4.19.87-1",
+        "Title": "kernel: heap overflow in mwifiex_set_uap_rates() function of Marvell Wifi Driver leading to DoS",
+        "Description": "There is heap-based buffer overflow in Linux kernel, all versions up to, excluding 5.3, in the marvell wifi chip driver in Linux kernel, that allows local users to cause a denial of service(system crash) or possibly execute arbitrary code.",
+        "Severity": "HIGH",
+        "References": [
+          "http://linux.oracle.com/cve/CVE-2019-14814.html",
+          "http://linux.oracle.com/errata/ELSA-2020-0339.html",
+          "http://lists.opensuse.org/opensuse-security-announce/2019-09/msg00064.html",
+          "http://lists.opensuse.org/opensuse-security-announce/2019-09/msg00066.html",
+          "http://www.openwall.com/lists/oss-security/2019/08/28/1",
+          "https://access.redhat.com/security/cve/cve-2019-14814",
+          "https://bugzilla.redhat.com/show_bug.cgi?id=CVE-2019-14814",
+          "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-14814",
+          "https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/commit/?id=7caac62ed598a196d6ddf8d9c121e12e082cac3a",
+          "https://github.com/torvalds/linux/commit/7caac62ed598a196d6ddf8d9c121e12e082cac3a",
+          "https://lists.debian.org/debian-lts-announce/2019/09/msg00025.html",
+          "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/O3RUDQJXRJQVGHCGR4YZWTQ3ECBI7TXH/",
+          "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/T4JZ6AEUKFWBHQAROGMQARJ274PQP2QP/",
+          "https://www.openwall.com/lists/oss-security/2019/08/28/1"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2019-14815",
+        "PkgName": "linux-libc-dev",
+        "InstalledVersion": "4.19.67-2+deb10u2",
+        "FixedVersion": "4.19.87-1",
+        "Title": "kernel: heap-overflow in mwifiex_set_wmm_params() function of Marvell WiFi driver leading to DoS",
+        "Description": "A vulnerability was found in Linux Kernel, where a Heap Overflow was found in mwifiex_set_wmm_params() function of Marvell Wifi Driver.",
+        "Severity": "HIGH",
+        "References": [
+          "http://linux.oracle.com/cve/CVE-2019-14815.html",
+          "http://linux.oracle.com/errata/ELSA-2020-0339.html",
+          "https://access.redhat.com/security/cve/cve-2019-14815",
+          "https://bugzilla.redhat.com/show_bug.cgi?id=CVE-2019-14815",
+          "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-14815",
+          "https://github.com/torvalds/linux/commit/7caac62ed598a196d6ddf8d9c121e12e082cac3a",
+          "https://lore.kernel.org/linux-wireless/20190828020751.13625-1-huangwenabc@gmail.com",
+          "https://security.netapp.com/advisory/ntap-20200103-0001/",
+          "https://www.openwall.com/lists/oss-security/2019/08/28/1"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2019-14816",
+        "PkgName": "linux-libc-dev",
+        "InstalledVersion": "4.19.67-2+deb10u2",
+        "FixedVersion": "4.19.87-1",
+        "Title": "kernel: heap overflow in mwifiex_update_vs_ie() function of Marvell WiFi driver",
+        "Description": "There is heap-based buffer overflow in kernel, all versions up to, excluding 5.3, in the marvell wifi chip driver in Linux kernel, that allows local users to cause a denial of service(system crash) or possibly execute arbitrary code.",
+        "Severity": "HIGH",
+        "References": [
+          "http://linux.oracle.com/cve/CVE-2019-14816.html",
+          "http://linux.oracle.com/errata/ELSA-2020-0374.html",
+          "http://lists.opensuse.org/opensuse-security-announce/2019-09/msg00064.html",
+          "http://lists.opensuse.org/opensuse-security-announce/2019-09/msg00066.html",
+          "http://www.openwall.com/lists/oss-security/2019/08/28/1",
+          "https://access.redhat.com/security/cve/cve-2019-14816",
+          "https://bugzilla.redhat.com/show_bug.cgi?id=CVE-2019-14816",
+          "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-14816",
+          "https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/commit/?id=7caac62ed598a196d6ddf8d9c121e12e082cac3a",
+          "https://github.com/torvalds/linux/commit/7caac62ed598a196d6ddf8d9c121e12e082cac3",
+          "https://lists.debian.org/debian-lts-announce/2019/09/msg00025.html",
+          "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/O3RUDQJXRJQVGHCGR4YZWTQ3ECBI7TXH/",
+          "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/T4JZ6AEUKFWBHQAROGMQARJ274PQP2QP/",
+          "https://www.openwall.com/lists/oss-security/2019/08/28/1"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2019-14895",
+        "PkgName": "linux-libc-dev",
+        "InstalledVersion": "4.19.67-2+deb10u2",
+        "FixedVersion": "4.19.98-1",
+        "Title": "kernel: heap-based buffer overflow in mwifiex_process_country_ie() function in drivers/net/wireless/marvell/mwifiex/sta_ioctl.c",
+        "Description": "A heap-based buffer overflow was discovered in the Linux kernel, all versions 3.x.x and 4.x.x before 4.18.0, in Marvell WiFi chip driver. The flaw could occur when the station attempts a connection negotiation during the handling of the remote devices country settings. This could allow the remote device to cause a denial of service (system crash) or possibly execute arbitrary code.",
+        "Severity": "HIGH",
+        "References": [
+          "http://linux.oracle.com/cve/CVE-2019-14895.html",
+          "http://linux.oracle.com/errata/ELSA-2020-0374.html",
+          "http://lists.opensuse.org/opensuse-security-announce/2019-12/msg00029.html",
+          "https://bugzilla.redhat.com/show_bug.cgi?id=CVE-2019-14895",
+          "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-14895",
+          "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/D4ISVNIC44SOGXTUBCIZFSUNQJ5LRKNZ/",
+          "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/MN6MLCN7G7VFTSXSZYXKXEFCUMFBUAXQ/",
+          "https://www.openwall.com/lists/oss-security/2019/11/22/2"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2019-14897",
+        "PkgName": "linux-libc-dev",
+        "InstalledVersion": "4.19.67-2+deb10u2",
+        "FixedVersion": "4.19.98-1",
+        "Title": "kernel: stack-based buffer overflow in add_ie_rates function in drivers/net/wireless/marvell/libertas/cfg.c",
+        "Description": "A stack-based buffer overflow was found in the Linux kernel, version kernel-2.6.32, in Marvell WiFi chip driver. An attacker is able to cause a denial of service (system crash) or, possibly execute arbitrary code, when a STA works in IBSS mode (allows connecting stations together without the use of an AP) and connects to another STA.",
+        "Severity": "HIGH",
+        "References": [
+          "http://packetstormsecurity.com/files/155879/Kernel-Live-Patch-Security-Notice-LSN-0061-1.html",
+          "https://bugzilla.redhat.com/show_bug.cgi?id=CVE-2019-14897",
+          "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-14897",
+          "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/D4ISVNIC44SOGXTUBCIZFSUNQJ5LRKNZ/",
+          "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/MN6MLCN7G7VFTSXSZYXKXEFCUMFBUAXQ/",
+          "https://usn.ubuntu.com/4225-1/",
+          "https://usn.ubuntu.com/4226-1/",
+          "https://usn.ubuntu.com/4227-1/",
+          "https://usn.ubuntu.com/4227-2/",
+          "https://usn.ubuntu.com/4228-1/",
+          "https://usn.ubuntu.com/4228-2/"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2019-15099",
+        "PkgName": "linux-libc-dev",
+        "InstalledVersion": "4.19.67-2+deb10u2",
+        "FixedVersion": "4.19.87-1",
+        "Title": "kernel: a NULL pointer dereference in drivers/net/wireless/ath/ath10k/usb.c leads to a crash",
+        "Description": "drivers/net/wireless/ath/ath10k/usb.c in the Linux kernel through 5.2.8 has a NULL pointer dereference via an incomplete address in an endpoint descriptor.",
+        "Severity": "HIGH",
+        "References": [
+          "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-15099",
+          "https://lore.kernel.org/linux-wireless/20190804003101.11541-1-benquike@gmail.com/T/#u",
+          "https://security.netapp.com/advisory/ntap-20190905-0002/"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2019-15918",
+        "PkgName": "linux-libc-dev",
+        "InstalledVersion": "4.19.67-2+deb10u2",
+        "FixedVersion": "4.19.87-1",
+        "Title": "kernel: out-of-bounds read in fs/cifs/smb2pdu.c",
+        "Description": "An issue was discovered in the Linux kernel before 5.0.10. SMB2_negotiate in fs/cifs/smb2pdu.c has an out-of-bounds read because data structures are incompletely updated after a change from smb30 to smb21.",
+        "Severity": "HIGH",
+        "References": [
+          "https://cdn.kernel.org/pub/linux/kernel/v5.x/ChangeLog-5.0.10",
+          "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-15918",
+          "https://github.com/torvalds/linux/commit/b57a55e2200ede754e4dc9cce4ba9402544b9365",
+          "https://security.netapp.com/advisory/ntap-20191004-0001/"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2019-16089",
+        "PkgName": "linux-libc-dev",
+        "InstalledVersion": "4.19.67-2+deb10u2",
+        "Title": "kernel: Improper return check in nbd_genl_status function in drivers/block/nbd.c",
+        "Description": "An issue was discovered in the Linux kernel through 5.2.13. nbd_genl_status in drivers/block/nbd.c does not check the nla_nest_start_noflag return value.",
+        "Severity": "HIGH",
+        "References": [
+          "https://lore.kernel.org/patchwork/patch/1106884/",
+          "https://security.netapp.com/advisory/ntap-20191004-0001/"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2019-16229",
+        "PkgName": "linux-libc-dev",
+        "InstalledVersion": "4.19.67-2+deb10u2",
+        "Title": "kernel: null pointer dereference in drivers/gpu/drm/amd/amdkfd/kfd_interrupt.c",
+        "Description": "** DISPUTED ** drivers/gpu/drm/amd/amdkfd/kfd_interrupt.c in the Linux kernel 5.2.14 does not check the alloc_workqueue return value, leading to a NULL pointer dereference. NOTE: The security community disputes this issues as not being serious enough to be deserving a CVE id.",
+        "Severity": "HIGH",
+        "References": [
+          "https://bugzilla.suse.com/show_bug.cgi?id=1150469#c3",
+          "https://lkml.org/lkml/2019/9/9/487",
+          "https://security.netapp.com/advisory/ntap-20191004-0001/"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2019-16230",
+        "PkgName": "linux-libc-dev",
+        "InstalledVersion": "4.19.67-2+deb10u2",
+        "Title": "kernel: null pointer dereference in drivers/gpu/drm/radeon/radeon_display.c",
+        "Description": "drivers/gpu/drm/radeon/radeon_display.c in the Linux kernel 5.2.14 does not check the alloc_workqueue return value, leading to a NULL pointer dereference.",
+        "Severity": "HIGH",
+        "References": [
+          "https://lkml.org/lkml/2019/9/9/487",
+          "https://security.netapp.com/advisory/ntap-20191004-0001/"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2019-16231",
+        "PkgName": "linux-libc-dev",
+        "InstalledVersion": "4.19.67-2+deb10u2",
+        "Title": "kernel: null-pointer dereference in drivers/net/fjes/fjes_main.c",
+        "Description": "drivers/net/fjes/fjes_main.c in the Linux kernel 5.2.14 does not check the alloc_workqueue return value, leading to a NULL pointer dereference.",
+        "Severity": "HIGH",
+        "References": [
+          "https://lkml.org/lkml/2019/9/9/487",
+          "https://security.netapp.com/advisory/ntap-20191004-0001/"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2019-16232",
+        "PkgName": "linux-libc-dev",
+        "InstalledVersion": "4.19.67-2+deb10u2",
+        "Title": "kernel: null-pointer dereference in drivers/net/wireless/marvell/libertas/if_sdio.c",
+        "Description": "drivers/net/wireless/marvell/libertas/if_sdio.c in the Linux kernel 5.2.14 does not check the alloc_workqueue return value, leading to a NULL pointer dereference.",
+        "Severity": "HIGH",
+        "References": [
+          "https://lkml.org/lkml/2019/9/9/487",
+          "https://security.netapp.com/advisory/ntap-20191004-0001/"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2019-16233",
+        "PkgName": "linux-libc-dev",
+        "InstalledVersion": "4.19.67-2+deb10u2",
+        "Title": "kernel: null pointer dereference in drivers/scsi/qla2xxx/qla_os.c",
+        "Description": "drivers/scsi/qla2xxx/qla_os.c in the Linux kernel 5.2.14 does not check the alloc_workqueue return value, leading to a NULL pointer dereference.",
+        "Severity": "HIGH",
+        "References": [
+          "http://linux.oracle.com/cve/CVE-2019-16233.html",
+          "http://linux.oracle.com/errata/ELSA-2020-5508.html",
+          "https://lkml.org/lkml/2019/9/9/487",
+          "https://security.netapp.com/advisory/ntap-20191004-0001/"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2019-16234",
+        "PkgName": "linux-libc-dev",
+        "InstalledVersion": "4.19.67-2+deb10u2",
+        "Title": "kernel: null pointer dereference in drivers/net/wireless/intel/iwlwifi/pcie/trans.c",
+        "Description": "drivers/net/wireless/intel/iwlwifi/pcie/trans.c in the Linux kernel 5.2.14 does not check the alloc_workqueue return value, leading to a NULL pointer dereference.",
+        "Severity": "HIGH",
+        "References": [
+          "https://lkml.org/lkml/2019/9/9/487",
+          "https://security.netapp.com/advisory/ntap-20191004-0001/"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2019-16746",
+        "PkgName": "linux-libc-dev",
+        "InstalledVersion": "4.19.67-2+deb10u2",
+        "FixedVersion": "4.19.87-1",
+        "Title": "kernel: buffer-overflow hardening in WiFi beacon validation code.",
+        "Description": "An issue was discovered in net/wireless/nl80211.c in the Linux kernel through 5.2.17. It does not check the length of variable elements in a beacon head, leading to a buffer overflow.",
+        "Severity": "HIGH",
+        "References": [
+          "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-16746",
+          "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/TASE2ESEZAER6DTZH3DJ4K2JNO46TVL7/",
+          "https://marc.info/?l=linux-wireless\u0026m=156901391225058\u0026w=2"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2019-17075",
+        "PkgName": "linux-libc-dev",
+        "InstalledVersion": "4.19.67-2+deb10u2",
+        "FixedVersion": "4.19.87-1",
+        "Title": "kernel: denial of service in write_tpt_entry in drivers/infiniband/hw/cxgb4/mem.c",
+        "Description": "An issue was discovered in write_tpt_entry in drivers/infiniband/hw/cxgb4/mem.c in the Linux kernel through 5.3.2. The cxgb4 driver is directly calling dma_map_single (a DMA function) from a stack variable. This could allow an attacker to trigger a Denial of Service, exploitable if this driver is used on an architecture for which this stack/DMA interaction has security relevance.",
+        "Severity": "HIGH",
+        "References": [
+          "http://packetstormsecurity.com/files/155212/Slackware-Security-Advisory-Slackware-14.2-kernel-Updates.html",
+          "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-17075",
+          "https://lore.kernel.org/lkml/20191001165611.GA3542072@kroah.com",
+          "https://seclists.org/bugtraq/2019/Nov/11"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2019-17133",
+        "PkgName": "linux-libc-dev",
+        "InstalledVersion": "4.19.67-2+deb10u2",
+        "FixedVersion": "4.19.87-1",
+        "Title": "kernel: buffer overflow in cfg80211_mgd_wext_giwessid in net/wireless/wext-sme.c",
+        "Description": "In the Linux kernel through 5.3.2, cfg80211_mgd_wext_giwessid in net/wireless/wext-sme.c does not reject a long SSID IE, leading to a Buffer Overflow.",
+        "Severity": "HIGH",
+        "References": [
+          "http://linux.oracle.com/cve/CVE-2019-17133.html",
+          "http://linux.oracle.com/errata/ELSA-2020-0374.html",
+          "http://lists.opensuse.org/opensuse-security-announce/2019-10/msg00064.html",
+          "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-17133",
+          "https://marc.info/?l=linux-wireless\u0026m=157018270915487\u0026w=2",
+          "https://security.netapp.com/advisory/ntap-20191031-0005/"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2019-17666",
+        "PkgName": "linux-libc-dev",
+        "InstalledVersion": "4.19.67-2+deb10u2",
+        "FixedVersion": "4.19.87-1",
+        "Title": "kernel: rtl_p2p_noa_ie in drivers/net/wireless/realtek/rtlwifi/ps.c in the Linux kernel lacks a certain upper-bound check, leading to a buffer overflow",
+        "Description": "rtl_p2p_noa_ie in drivers/net/wireless/realtek/rtlwifi/ps.c in the Linux kernel through 5.3.6 lacks a certain upper-bound check, leading to a buffer overflow.",
+        "Severity": "HIGH",
+        "References": [
+          "http://linux.oracle.com/cve/CVE-2019-17666.html",
+          "http://linux.oracle.com/errata/ELSA-2020-0339.html",
+          "http://lists.opensuse.org/opensuse-security-announce/2019-10/msg00064.html",
+          "https://arstechnica.com/information-technology/2019/10/unpatched-linux-flaw-may-let-attackers-crash-or-compromise-nearby-devices/",
+          "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-17666",
+          "https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/commit/?id=8c55dedb795be8ec0cf488f98c03a1c2176f7fb1",
+          "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/TRBP4O6D2SQ2NHCRHTJONGCZLWOIV5MN/",
+          "https://lkml.org/lkml/2019/10/16/1226",
+          "https://security.netapp.com/advisory/ntap-20191031-0005/",
+          "https://twitter.com/nicowaisman/status/1184864519316758535"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2019-18809",
+        "PkgName": "linux-libc-dev",
+        "InstalledVersion": "4.19.67-2+deb10u2",
+        "FixedVersion": "4.19.98-1",
+        "Title": "kernel: memory leak in  af9005_identify_state() function in drivers/media/usb/dvb-usb/af9005.c",
+        "Description": "A memory leak in the af9005_identify_state() function in drivers/media/usb/dvb-usb/af9005.c in the Linux kernel through 5.3.9 allows attackers to cause a denial of service (memory consumption), aka CID-2289adbfa559.",
+        "Severity": "HIGH",
+        "References": [
+          "http://lists.opensuse.org/opensuse-security-announce/2019-12/msg00029.html",
+          "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-18809",
+          "https://github.com/torvalds/linux/commit/2289adbfa559050d2a38bcd9caac1c18b800e928",
+          "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/LYIFGYEDQXP5DVJQQUARQRK2PXKBKQGY/",
+          "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/YWWOOJKZ4NQYN4RMFIVJ3ZIXKJJI3MKP/",
+          "https://security.netapp.com/advisory/ntap-20191205-0001/"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2019-18813",
+        "PkgName": "linux-libc-dev",
+        "InstalledVersion": "4.19.67-2+deb10u2",
+        "FixedVersion": "4.19.87-1",
+        "Title": "kernel: memory leak in dwc3_pci_probe() function in drivers/usb/dwc3/dwc3-pci.c",
+        "Description": "A memory leak in the dwc3_pci_probe() function in drivers/usb/dwc3/dwc3-pci.c in the Linux kernel through 5.3.9 allows attackers to cause a denial of service (memory consumption) by triggering platform_device_add_properties() failures, aka CID-9bbfceea12a8.",
+        "Severity": "HIGH",
+        "References": [
+          "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-18813",
+          "https://git.kernel.org/cgit/linux/kernel/git/torvalds/linux.git/commit/?id=9bbfceea12a8f145097a27d7c7267af25893c060",
+          "https://security.netapp.com/advisory/ntap-20191205-0001/"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2019-18814",
+        "PkgName": "linux-libc-dev",
+        "InstalledVersion": "4.19.67-2+deb10u2",
+        "Title": "kernel: use-after-free in aa_audit_rule_init() in security/apparmor/audit.c",
+        "Description": "An issue was discovered in the Linux kernel through 5.3.9. There is a use-after-free when aa_label_parse() fails in aa_audit_rule_init() in security/apparmor/audit.c.",
+        "Severity": "HIGH",
+        "References": [
+          "https://lore.kernel.org/patchwork/patch/1142523/",
+          "https://support.f5.com/csp/article/K21561554?utm_source=f5support\u0026amp;utm_medium=RSS"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2019-19045",
+        "PkgName": "linux-libc-dev",
+        "InstalledVersion": "4.19.67-2+deb10u2",
+        "FixedVersion": "4.19.87-1",
+        "Title": "kernel: dos in mlx5_fpga_conn_create_cq() function in drivers/net/ethernet/mellanox/mlx5/core/fpga/conn.c",
+        "Description": "A memory leak in the mlx5_fpga_conn_create_cq() function in drivers/net/ethernet/mellanox/mlx5/core/fpga/conn.c in the Linux kernel before 5.3.11 allows attackers to cause a denial of service (memory consumption) by triggering mlx5_vector2eqn() failures, aka CID-c8c2a057fdc7.",
+        "Severity": "HIGH",
+        "References": [
+          "https://cdn.kernel.org/pub/linux/kernel/v5.x/ChangeLog-5.3.11",
+          "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-19045",
+          "https://github.com/torvalds/linux/commit/c8c2a057fdc7de1cd16f4baa51425b932a42eb39",
+          "https://security.netapp.com/advisory/ntap-20191205-0001/"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2019-19046",
+        "PkgName": "linux-libc-dev",
+        "InstalledVersion": "4.19.67-2+deb10u2",
+        "Title": "kernel: dos in in the __ipmi_bmc_register() function in drivers/char/ipmi/ipmi_msghandler.c",
+        "Description": "** DISPUTED ** A memory leak in the __ipmi_bmc_register() function in drivers/char/ipmi/ipmi_msghandler.c in the Linux kernel through 5.3.11 allows attackers to cause a denial of service (memory consumption) by triggering ida_simple_get() failure, aka CID-4aa7afb0ee20. NOTE: third parties dispute the relevance of this because an attacker cannot realistically control this failure at probe time.",
+        "Severity": "HIGH",
+        "References": [
+          "https://bugzilla.suse.com/show_bug.cgi?id=1157304",
+          "https://github.com/torvalds/linux/commit/4aa7afb0ee20a97fbf0c5bab3df028d5fb85fdab",
+          "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/O3PSDE6PTOTVBK2YTKB2TFQP2SUBVSNF/",
+          "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/PY7LJMSPAGRIKABJPDKQDTXYW3L5RX2T/"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2019-19048",
+        "PkgName": "linux-libc-dev",
+        "InstalledVersion": "4.19.67-2+deb10u2",
+        "FixedVersion": "4.19.87-1",
+        "Title": "kernel: dos in crypto_reportstat() function in drivers/virt/vboxguest/vboxguest_utils.c",
+        "Description": "A memory leak in the crypto_reportstat() function in drivers/virt/vboxguest/vboxguest_utils.c in the Linux kernel before 5.3.9 allows attackers to cause a denial of service (memory consumption) by triggering copy_form_user() failures, aka CID-e0b0cb938864.",
+        "Severity": "HIGH",
+        "References": [
+          "https://cdn.kernel.org/pub/linux/kernel/v5.x/ChangeLog-5.3.9",
+          "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-19048",
+          "https://github.com/torvalds/linux/commit/e0b0cb9388642c104838fac100a4af32745621e2",
+          "https://security.netapp.com/advisory/ntap-20191205-0001/",
+          "https://usn.ubuntu.com/4208-1/"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2019-19049",
+        "PkgName": "linux-libc-dev",
+        "InstalledVersion": "4.19.67-2+deb10u2",
+        "FixedVersion": "4.19.87-1",
+        "Title": "kernel: dos in unittest_data_add() function in drivers/of/unittest.c",
+        "Description": "** DISPUTED ** A memory leak in the unittest_data_add() function in drivers/of/unittest.c in the Linux kernel before 5.3.10 allows attackers to cause a denial of service (memory consumption) by triggering of_fdt_unflatten_tree() failures, aka CID-e13de8fe0d6a. NOTE: third parties dispute the relevance of this because unittest.c can only be reached during boot.",
+        "Severity": "HIGH",
+        "References": [
+          "https://bugzilla.suse.com/show_bug.cgi?id=1157173",
+          "https://cdn.kernel.org/pub/linux/kernel/v5.x/ChangeLog-5.3.10",
+          "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-19049",
+          "https://github.com/torvalds/linux/commit/e13de8fe0d6a51341671bbe384826d527afe8d44"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2019-19050",
+        "PkgName": "linux-libc-dev",
+        "InstalledVersion": "4.19.67-2+deb10u2",
+        "Title": "kernel: dos in crypto_reportstat() function in crypto/crypto_user_stat.c",
+        "Description": "A memory leak in the crypto_reportstat() function in crypto/crypto_user_stat.c in the Linux kernel through 5.3.11 allows attackers to cause a denial of service (memory consumption) by triggering crypto_reportstat_alg() failures, aka CID-c03b04dcdba1.",
+        "Severity": "HIGH",
+        "References": [
+          "https://github.com/torvalds/linux/commit/c03b04dcdba1da39903e23cc4d072abf8f68f2dd",
+          "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/O3PSDE6PTOTVBK2YTKB2TFQP2SUBVSNF/",
+          "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/PY7LJMSPAGRIKABJPDKQDTXYW3L5RX2T/"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2019-19051",
+        "PkgName": "linux-libc-dev",
+        "InstalledVersion": "4.19.67-2+deb10u2",
+        "FixedVersion": "4.19.98-1",
+        "Title": "kernel: dos in i2400m_op_rfkill_sw_toggle() function in drivers/net/wimax/i2400m/op-rfkill.c",
+        "Description": "A memory leak in the i2400m_op_rfkill_sw_toggle() function in drivers/net/wimax/i2400m/op-rfkill.c in the Linux kernel before 5.3.11 allows attackers to cause a denial of service (memory consumption), aka CID-6f3ef5c25cc7.",
+        "Severity": "HIGH",
+        "References": [
+          "https://cdn.kernel.org/pub/linux/kernel/v5.x/ChangeLog-5.3.11",
+          "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-19051",
+          "https://github.com/torvalds/linux/commit/6f3ef5c25cc762687a7341c18cbea5af54461407",
+          "https://security.netapp.com/advisory/ntap-20191205-0001/"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2019-19052",
+        "PkgName": "linux-libc-dev",
+        "InstalledVersion": "4.19.67-2+deb10u2",
+        "FixedVersion": "4.19.87-1",
+        "Title": "kernel: dos in gs_can_open() function in drivers/net/can/usb/gs_usb.c",
+        "Description": "A memory leak in the gs_can_open() function in drivers/net/can/usb/gs_usb.c in the Linux kernel before 5.3.11 allows attackers to cause a denial of service (memory consumption) by triggering usb_submit_urb() failures, aka CID-fb5be6a7b486.",
+        "Severity": "HIGH",
+        "References": [
+          "http://lists.opensuse.org/opensuse-security-announce/2019-12/msg00029.html",
+          "https://cdn.kernel.org/pub/linux/kernel/v5.x/ChangeLog-5.3.11",
+          "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-19052",
+          "https://github.com/torvalds/linux/commit/fb5be6a7b4863ecc44963bb80ca614584b6c7817",
+          "https://security.netapp.com/advisory/ntap-20191205-0001/"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2019-19054",
+        "PkgName": "linux-libc-dev",
+        "InstalledVersion": "4.19.67-2+deb10u2",
+        "Title": "kernel: A memory leak in the cx23888_ir_probe() function in drivers/media/pci/cx23885/cx23888-ir.c allows attackers to cause a DoS",
+        "Description": "A memory leak in the cx23888_ir_probe() function in drivers/media/pci/cx23885/cx23888-ir.c in the Linux kernel through 5.3.11 allows attackers to cause a denial of service (memory consumption) by triggering kfifo_alloc() failures, aka CID-a7b2df76b42b.",
+        "Severity": "HIGH",
+        "References": [
+          "https://github.com/torvalds/linux/commit/a7b2df76b42bdd026e3106cf2ba97db41345a177",
+          "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/O3PSDE6PTOTVBK2YTKB2TFQP2SUBVSNF/",
+          "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/PY7LJMSPAGRIKABJPDKQDTXYW3L5RX2T/"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2019-19056",
+        "PkgName": "linux-libc-dev",
+        "InstalledVersion": "4.19.67-2+deb10u2",
+        "FixedVersion": "4.19.98-1",
+        "Title": "kernel: A memory leak in the mwifiex_pcie_alloc_cmdrsp_buf() function in drivers/net/wireless/marvell/mwifiex/pcie.c allows to cause DoS",
+        "Description": "A memory leak in the mwifiex_pcie_alloc_cmdrsp_buf() function in drivers/net/wireless/marvell/mwifiex/pcie.c in the Linux kernel through 5.3.11 allows attackers to cause a denial of service (memory consumption) by triggering mwifiex_map_pci_memory() failures, aka CID-db8fd2cde932.",
+        "Severity": "HIGH",
+        "References": [
+          "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-19056",
+          "https://github.com/torvalds/linux/commit/db8fd2cde93227e566a412cf53173ffa227998bc",
+          "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/O3PSDE6PTOTVBK2YTKB2TFQP2SUBVSNF/",
+          "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/PY7LJMSPAGRIKABJPDKQDTXYW3L5RX2T/"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2019-19058",
+        "PkgName": "linux-libc-dev",
+        "InstalledVersion": "4.19.67-2+deb10u2",
+        "FixedVersion": "4.19.98-1",
+        "Title": "kernel: A memory leak in the alloc_sgtable() function in drivers/net/wireless/intel/iwlwifi/fw/dbg.c allows for a DoS",
+        "Description": "A memory leak in the alloc_sgtable() function in drivers/net/wireless/intel/iwlwifi/fw/dbg.c in the Linux kernel through 5.3.11 allows attackers to cause a denial of service (memory consumption) by triggering alloc_page() failures, aka CID-b4b814fec1a5.",
+        "Severity": "HIGH",
+        "References": [
+          "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-19058",
+          "https://github.com/torvalds/linux/commit/b4b814fec1a5a849383f7b3886b654a13abbda7d",
+          "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/O3PSDE6PTOTVBK2YTKB2TFQP2SUBVSNF/",
+          "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/PY7LJMSPAGRIKABJPDKQDTXYW3L5RX2T/"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2019-19059",
+        "PkgName": "linux-libc-dev",
+        "InstalledVersion": "4.19.67-2+deb10u2",
+        "FixedVersion": "4.19.98-1",
+        "Title": "kernel: Multiple memory leaks in the iwl_pcie_ctxt_info_gen3_init() function in drivers/net/wireless/intel/iwlwifi/pcie/ctxt-info-gen3.c allows for a DoS",
+        "Description": "Multiple memory leaks in the iwl_pcie_ctxt_info_gen3_init() function in drivers/net/wireless/intel/iwlwifi/pcie/ctxt-info-gen3.c in the Linux kernel through 5.3.11 allow attackers to cause a denial of service (memory consumption) by triggering iwl_pcie_init_fw_sec() or dma_alloc_coherent() failures, aka CID-0f4f199443fa.",
+        "Severity": "HIGH",
+        "References": [
+          "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-19059",
+          "https://github.com/torvalds/linux/commit/0f4f199443faca715523b0659aa536251d8b978f",
+          "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/O3PSDE6PTOTVBK2YTKB2TFQP2SUBVSNF/",
+          "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/PY7LJMSPAGRIKABJPDKQDTXYW3L5RX2T/"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2019-19060",
+        "PkgName": "linux-libc-dev",
+        "InstalledVersion": "4.19.67-2+deb10u2",
+        "FixedVersion": "4.19.87-1",
+        "Title": "kernel: A memory leak in the adis_update_scan_mode() function in drivers/iio/imu/adis_buffer.c allows for a DoS",
+        "Description": "A memory leak in the adis_update_scan_mode() function in drivers/iio/imu/adis_buffer.c in the Linux kernel before 5.3.9 allows attackers to cause a denial of service (memory consumption), aka CID-ab612b1daf41.",
+        "Severity": "HIGH",
+        "References": [
+          "https://cdn.kernel.org/pub/linux/kernel/v5.x/ChangeLog-5.3.9",
+          "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-19060",
+          "https://github.com/torvalds/linux/commit/ab612b1daf415b62c58e130cb3d0f30b255a14d0",
+          "https://security.netapp.com/advisory/ntap-20191205-0001/",
+          "https://usn.ubuntu.com/4208-1/",
+          "https://usn.ubuntu.com/4210-1/"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2019-19061",
+        "PkgName": "linux-libc-dev",
+        "InstalledVersion": "4.19.67-2+deb10u2",
+        "Title": "kernel: A memory leak in the adis_update_scan_mode_burst() function in drivers/iio/imu/adis_buffer.c allows for a DoS",
+        "Description": "A memory leak in the adis_update_scan_mode_burst() function in drivers/iio/imu/adis_buffer.c in the Linux kernel before 5.3.9 allows attackers to cause a denial of service (memory consumption), aka CID-9c0530e898f3.",
+        "Severity": "HIGH",
+        "References": [
+          "https://cdn.kernel.org/pub/linux/kernel/v5.x/ChangeLog-5.3.9",
+          "https://github.com/torvalds/linux/commit/9c0530e898f384c5d279bfcebd8bb17af1105873",
+          "https://security.netapp.com/advisory/ntap-20191205-0001/",
+          "https://usn.ubuntu.com/4208-1/"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2019-19062",
+        "PkgName": "linux-libc-dev",
+        "InstalledVersion": "4.19.67-2+deb10u2",
+        "FixedVersion": "4.19.98-1",
+        "Title": "kernel: A memory leak in the crypto_report() function in crypto/crypto_user_base.c allows for a DoS",
+        "Description": "A memory leak in the crypto_report() function in crypto/crypto_user_base.c in the Linux kernel through 5.3.11 allows attackers to cause a denial of service (memory consumption) by triggering crypto_report_alg() failures, aka CID-ffdde5932042.",
+        "Severity": "HIGH",
+        "References": [
+          "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-19062",
+          "https://github.com/torvalds/linux/commit/ffdde5932042600c6807d46c1550b28b0db6a3bc",
+          "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/O3PSDE6PTOTVBK2YTKB2TFQP2SUBVSNF/",
+          "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/PY7LJMSPAGRIKABJPDKQDTXYW3L5RX2T/"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2019-19063",
+        "PkgName": "linux-libc-dev",
+        "InstalledVersion": "4.19.67-2+deb10u2",
+        "FixedVersion": "4.19.98-1",
+        "Title": "kernel: Two memory leaks in the rtl_usb_probe() function in drivers/net/wireless/realtek/rtlwifi/usb.c allow for a DoS",
+        "Description": "Two memory leaks in the rtl_usb_probe() function in drivers/net/wireless/realtek/rtlwifi/usb.c in the Linux kernel through 5.3.11 allow attackers to cause a denial of service (memory consumption), aka CID-3f9361695113.",
+        "Severity": "HIGH",
+        "References": [
+          "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-19063",
+          "https://github.com/torvalds/linux/commit/3f93616951138a598d930dcaec40f2bfd9ce43bb",
+          "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/O3PSDE6PTOTVBK2YTKB2TFQP2SUBVSNF/",
+          "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/PY7LJMSPAGRIKABJPDKQDTXYW3L5RX2T/"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2019-19064",
+        "PkgName": "linux-libc-dev",
+        "InstalledVersion": "4.19.67-2+deb10u2",
+        "Title": "kernel: A memory leak in the fsl_lpspi_probe() function in drivers/spi/spi-fsl-lpspi.c allows for a DoS",
+        "Description": "** DISPUTED ** A memory leak in the fsl_lpspi_probe() function in drivers/spi/spi-fsl-lpspi.c in the Linux kernel through 5.3.11 allows attackers to cause a denial of service (memory consumption) by triggering pm_runtime_get_sync() failures, aka CID-057b8945f78f. NOTE: third parties dispute the relevance of this because an attacker cannot realistically control these failures at probe time.",
+        "Severity": "HIGH",
+        "References": [
+          "https://bugzilla.suse.com/show_bug.cgi?id=1157300",
+          "https://github.com/torvalds/linux/commit/057b8945f78f76d0b04eeb5c27cd9225e5e7ad86",
+          "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/O3PSDE6PTOTVBK2YTKB2TFQP2SUBVSNF/",
+          "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/PY7LJMSPAGRIKABJPDKQDTXYW3L5RX2T/"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2019-19065",
+        "PkgName": "linux-libc-dev",
+        "InstalledVersion": "4.19.67-2+deb10u2",
+        "FixedVersion": "4.19.87-1",
+        "Title": "kernel: A memory leak in the sdma_init() function in drivers/infiniband/hw/hfi1/sdma.c allows for a DoS",
+        "Description": "A memory leak in the sdma_init() function in drivers/infiniband/hw/hfi1/sdma.c in the Linux kernel before 5.3.9 allows attackers to cause a denial of service (memory consumption) by triggering rhashtable_init() failures, aka CID-34b3be18a04e.",
+        "Severity": "HIGH",
+        "References": [
+          "https://cdn.kernel.org/pub/linux/kernel/v5.x/ChangeLog-5.3.9",
+          "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-19065",
+          "https://github.com/torvalds/linux/commit/34b3be18a04ecdc610aae4c48e5d1b799d8689f6",
+          "https://security.netapp.com/advisory/ntap-20191205-0001/",
+          "https://usn.ubuntu.com/4208-1/",
+          "https://usn.ubuntu.com/4210-1/"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2019-19066",
+        "PkgName": "linux-libc-dev",
+        "InstalledVersion": "4.19.67-2+deb10u2",
+        "FixedVersion": "4.19.98-1",
+        "Title": "kernel: A memory leak in the bfad_im_get_stats() function in drivers/scsi/bfa/bfad_attr.c allows for a DoS",
+        "Description": "A memory leak in the bfad_im_get_stats() function in drivers/scsi/bfa/bfad_attr.c in the Linux kernel through 5.3.11 allows attackers to cause a denial of service (memory consumption) by triggering bfa_port_get_stats() failures, aka CID-0e62395da2bd.",
+        "Severity": "HIGH",
+        "References": [
+          "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-19066",
+          "https://github.com/torvalds/linux/commit/0e62395da2bd5166d7c9e14cbc7503b256a34cb0",
+          "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/O3PSDE6PTOTVBK2YTKB2TFQP2SUBVSNF/",
+          "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/PY7LJMSPAGRIKABJPDKQDTXYW3L5RX2T/"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2019-19067",
+        "PkgName": "linux-libc-dev",
+        "InstalledVersion": "4.19.67-2+deb10u2",
+        "Title": "kernel: Four memory leaks in the acp_hw_init() function in drivers/gpu/drm/amd/amdgpu/amdgpu_acp.c allow for a DoS",
+        "Description": "** DISPUTED ** Four memory leaks in the acp_hw_init() function in drivers/gpu/drm/amd/amdgpu/amdgpu_acp.c in the Linux kernel before 5.3.8 allow attackers to cause a denial of service (memory consumption) by triggering mfd_add_hotplug_devices() or pm_genpd_add_device() failures, aka CID-57be09c6e874. NOTE: third parties dispute the relevance of this because the attacker must already have privileges for module loading.",
+        "Severity": "HIGH",
+        "References": [
+          "https://bugzilla.suse.com/show_bug.cgi?id=1157180",
+          "https://cdn.kernel.org/pub/linux/kernel/v5.x/ChangeLog-5.3.8",
+          "https://github.com/torvalds/linux/commit/57be09c6e8747bf48704136d9e3f92bfb93f5725"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2019-19068",
+        "PkgName": "linux-libc-dev",
+        "InstalledVersion": "4.19.67-2+deb10u2",
+        "FixedVersion": "4.19.98-1",
+        "Title": "kernel: A memory leak in the rtl8xxxu_submit_int_urb() function in drivers/net/wireless/realtek/rtl8xxxu/rtl8xxxu_core.c allows for a DoS",
+        "Description": "A memory leak in the rtl8xxxu_submit_int_urb() function in drivers/net/wireless/realtek/rtl8xxxu/rtl8xxxu_core.c in the Linux kernel through 5.3.11 allows attackers to cause a denial of service (memory consumption) by triggering usb_submit_urb() failures, aka CID-a2cdd07488e6.",
+        "Severity": "HIGH",
+        "References": [
+          "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-19068",
+          "https://github.com/torvalds/linux/commit/a2cdd07488e666aa93a49a3fc9c9b1299e27ef3c",
+          "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/O3PSDE6PTOTVBK2YTKB2TFQP2SUBVSNF/",
+          "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/PY7LJMSPAGRIKABJPDKQDTXYW3L5RX2T/"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2019-19070",
+        "PkgName": "linux-libc-dev",
+        "InstalledVersion": "4.19.67-2+deb10u2",
+        "Title": "kernel: A memory leak in the spi_gpio_probe() function in drivers/spi/spi-gpio.c allows for a DoS",
+        "Description": "** DISPUTED ** A memory leak in the spi_gpio_probe() function in drivers/spi/spi-gpio.c in the Linux kernel through 5.3.11 allows attackers to cause a denial of service (memory consumption) by triggering devm_add_action_or_reset() failures, aka CID-d3b0ffa1d75d. NOTE: third parties dispute the relevance of this because the system must have already been out of memory before the probe began.",
+        "Severity": "HIGH",
+        "References": [
+          "https://bugzilla.suse.com/show_bug.cgi?id=1157294",
+          "https://github.com/torvalds/linux/commit/d3b0ffa1d75d5305ebe34735598993afbb8a869d",
+          "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/O3PSDE6PTOTVBK2YTKB2TFQP2SUBVSNF/",
+          "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/PY7LJMSPAGRIKABJPDKQDTXYW3L5RX2T/"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2019-19071",
+        "PkgName": "linux-libc-dev",
+        "InstalledVersion": "4.19.67-2+deb10u2",
+        "FixedVersion": "4.19.98-1",
+        "Title": "kernel: A memory leak in the rsi_send_beacon() function in drivers/net/wireless/rsi/rsi_91x_mgmt.c allows for a DoS",
+        "Description": "A memory leak in the rsi_send_beacon() function in drivers/net/wireless/rsi/rsi_91x_mgmt.c in the Linux kernel through 5.3.11 allows attackers to cause a denial of service (memory consumption) by triggering rsi_prepare_beacon() failures, aka CID-d563131ef23c.",
+        "Severity": "HIGH",
+        "References": [
+          "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-19071",
+          "https://github.com/torvalds/linux/commit/d563131ef23cbc756026f839a82598c8445bc45f",
+          "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/O3PSDE6PTOTVBK2YTKB2TFQP2SUBVSNF/",
+          "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/PY7LJMSPAGRIKABJPDKQDTXYW3L5RX2T/"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2019-19072",
+        "PkgName": "linux-libc-dev",
+        "InstalledVersion": "4.19.67-2+deb10u2",
+        "Title": "kernel: A memory leak in the predicate_parse() function in kernel/trace/trace_events_filter.c allows for a DoS",
+        "Description": "A memory leak in the predicate_parse() function in kernel/trace/trace_events_filter.c in the Linux kernel through 5.3.11 allows attackers to cause a denial of service (memory consumption), aka CID-96c5c6e6a5b6.",
+        "Severity": "HIGH",
+        "References": [
+          "https://github.com/torvalds/linux/commit/96c5c6e6a5b6db592acae039fed54b5c8844cd35",
+          "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/O3PSDE6PTOTVBK2YTKB2TFQP2SUBVSNF/",
+          "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/PY7LJMSPAGRIKABJPDKQDTXYW3L5RX2T/"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2019-19074",
+        "PkgName": "linux-libc-dev",
+        "InstalledVersion": "4.19.67-2+deb10u2",
+        "Title": "kernel: a memory leak in the ath9k management function in allows local DoS",
+        "Description": "A memory leak in the ath9k_wmi_cmd() function in drivers/net/wireless/ath/ath9k/wmi.c in the Linux kernel through 5.3.11 allows attackers to cause a denial of service (memory consumption), aka CID-728c1e2a05e4.",
+        "Severity": "HIGH",
+        "References": [
+          "https://github.com/torvalds/linux/commit/728c1e2a05e4b5fc52fab3421dce772a806612a2",
+          "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/O3PSDE6PTOTVBK2YTKB2TFQP2SUBVSNF/",
+          "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/PY7LJMSPAGRIKABJPDKQDTXYW3L5RX2T/"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2019-19075",
+        "PkgName": "linux-libc-dev",
+        "InstalledVersion": "4.19.67-2+deb10u2",
+        "FixedVersion": "4.19.87-1",
+        "Title": "kernel: memory leak in the ca8210_probe() function in drivers/net/ieee802154/ca8210.c leads to DoS",
+        "Description": "A memory leak in the ca8210_probe() function in drivers/net/ieee802154/ca8210.c in the Linux kernel before 5.3.8 allows attackers to cause a denial of service (memory consumption) by triggering ca8210_get_platform_data() failures, aka CID-6402939ec86e.",
+        "Severity": "HIGH",
+        "References": [
+          "https://cdn.kernel.org/pub/linux/kernel/v5.x/ChangeLog-5.3.8",
+          "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-19075",
+          "https://github.com/torvalds/linux/commit/6402939ec86eaf226c8b8ae00ed983936b164908",
+          "https://security.netapp.com/advisory/ntap-20191205-0001/",
+          "https://usn.ubuntu.com/4208-1/",
+          "https://usn.ubuntu.com/4210-1/"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2019-19077",
+        "PkgName": "linux-libc-dev",
+        "InstalledVersion": "4.19.67-2+deb10u2",
+        "FixedVersion": "4.19.98-1",
+        "Title": "kernel: memory leak in bnxt_re_create_srq function in drivers/infiniband/hw/bnxt_re/ib_verbs.c",
+        "Description": "A memory leak in the bnxt_re_create_srq() function in drivers/infiniband/hw/bnxt_re/ib_verbs.c in the Linux kernel through 5.3.11 allows attackers to cause a denial of service (memory consumption) by triggering copy to udata failures, aka CID-4a9d46a9fe14.",
+        "Severity": "HIGH",
+        "References": [
+          "http://lists.opensuse.org/opensuse-security-announce/2019-12/msg00029.html",
+          "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-19077",
+          "https://github.com/torvalds/linux/commit/4a9d46a9fe14401f21df69cea97c62396d5fb053",
+          "https://security.netapp.com/advisory/ntap-20191205-0001/"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2019-19078",
+        "PkgName": "linux-libc-dev",
+        "InstalledVersion": "4.19.67-2+deb10u2",
+        "FixedVersion": "4.19.98-1",
+        "Title": "kernel: memory leak in the ath10k_usb_hif_tx_sg() function in drivers/net/wireless/ath/ath10k/usb.c leads to DoS",
+        "Description": "A memory leak in the ath10k_usb_hif_tx_sg() function in drivers/net/wireless/ath/ath10k/usb.c in the Linux kernel through 5.3.11 allows attackers to cause a denial of service (memory consumption) by triggering usb_submit_urb() failures, aka CID-b8d17e7d93d2.",
+        "Severity": "HIGH",
+        "References": [
+          "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-19078",
+          "https://github.com/torvalds/linux/commit/b8d17e7d93d2beb89e4f34c59996376b8b544792",
+          "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/D4ISVNIC44SOGXTUBCIZFSUNQJ5LRKNZ/",
+          "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/MN6MLCN7G7VFTSXSZYXKXEFCUMFBUAXQ/",
+          "https://security.netapp.com/advisory/ntap-20191205-0001/"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2019-19079",
+        "PkgName": "linux-libc-dev",
+        "InstalledVersion": "4.19.67-2+deb10u2",
+        "FixedVersion": "4.19.98-1",
+        "Title": "kernel: memory leak in the qrtr_tun_write_iter() function in net/qrtr/tun.c leads to DoS",
+        "Description": "A memory leak in the qrtr_tun_write_iter() function in net/qrtr/tun.c in the Linux kernel before 5.3 allows attackers to cause a denial of service (memory consumption), aka CID-a21b7f0cff19.",
+        "Severity": "HIGH",
+        "References": [
+          "Reference and upstream commit:",
+          "https://cdn.kernel.org/pub/linux/kernel/v5.x/ChangeLog-5.3",
+          "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-19079",
+          "https://github.com/torvalds/linux/commit/a21b7f0cff1906a93a0130b74713b15a0b36481d",
+          "https://security.netapp.com/advisory/ntap-20191205-0001/"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2019-19080",
+        "PkgName": "linux-libc-dev",
+        "InstalledVersion": "4.19.67-2+deb10u2",
+        "FixedVersion": "4.19.87-1",
+        "Title": "kernel: memory leaks in the nfp_flower_spawn_phy_reprs() function in drivers/net/ethernet/netronome/nfp/flower/main.c leads to DoS",
+        "Description": "Four memory leaks in the nfp_flower_spawn_phy_reprs() function in drivers/net/ethernet/netronome/nfp/flower/main.c in the Linux kernel before 5.3.4 allow attackers to cause a denial of service (memory consumption), aka CID-8572cea1461a.",
+        "Severity": "HIGH",
+        "References": [
+          "http://lists.opensuse.org/opensuse-security-announce/2019-12/msg00029.html",
+          "https://cdn.kernel.org/pub/linux/kernel/v5.x/ChangeLog-5.3.4",
+          "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-19080",
+          "https://github.com/torvalds/linux/commit/8572cea1461a006bce1d06c0c4b0575869125fa4",
+          "https://security.netapp.com/advisory/ntap-20191205-0001/"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2019-19081",
+        "PkgName": "linux-libc-dev",
+        "InstalledVersion": "4.19.67-2+deb10u2",
+        "FixedVersion": "4.19.87-1",
+        "Title": "kernel: memory leak in the nfp_flower_spawn_vnic_reprs() function in drivers/net/ethernet/netronome/nfp/flower/main.c leads to DoS",
+        "Description": "A memory leak in the nfp_flower_spawn_vnic_reprs() function in drivers/net/ethernet/netronome/nfp/flower/main.c in the Linux kernel before 5.3.4 allows attackers to cause a denial of service (memory consumption), aka CID-8ce39eb5a67a.",
+        "Severity": "HIGH",
+        "References": [
+          "http://lists.opensuse.org/opensuse-security-announce/2019-12/msg00029.html",
+          "https://cdn.kernel.org/pub/linux/kernel/v5.x/ChangeLog-5.3.4",
+          "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-19081",
+          "https://github.com/torvalds/linux/commit/8ce39eb5a67aee25d9f05b40b673c95b23502e3e",
+          "https://security.netapp.com/advisory/ntap-20191205-0001/"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2019-19082",
+        "PkgName": "linux-libc-dev",
+        "InstalledVersion": "4.19.67-2+deb10u2",
+        "Title": "kernel: memory leaks in *create_resource_pool() functions under drivers/gpu/drm/amd/display/dc leads to DoS",
+        "Description": "Memory leaks in *create_resource_pool() functions under drivers/gpu/drm/amd/display/dc in the Linux kernel through 5.3.11 allow attackers to cause a denial of service (memory consumption). This affects the dce120_create_resource_pool() function in drivers/gpu/drm/amd/display/dc/dce120/dce120_resource.c, the dce110_create_resource_pool() function in drivers/gpu/drm/amd/display/dc/dce110/dce110_resource.c, the dce100_create_resource_pool() function in drivers/gpu/drm/amd/display/dc/dce100/dce100_resource.c, the dcn10_create_resource_pool() function in drivers/gpu/drm/amd/display/dc/dcn10/dcn10_resource.c, and the dce112_create_resource_pool() function in drivers/gpu/drm/amd/display/dc/dce112/dce112_resource.c, aka CID-104c307147ad.",
+        "Severity": "HIGH",
+        "References": [
+          "http://lists.opensuse.org/opensuse-security-announce/2019-12/msg00029.html",
+          "https://github.com/torvalds/linux/commit/104c307147ad379617472dd91a5bcb368d72bd6d",
+          "https://security.netapp.com/advisory/ntap-20191205-0001/"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2019-19083",
+        "PkgName": "linux-libc-dev",
+        "InstalledVersion": "4.19.67-2+deb10u2",
+        "Title": "kernel: memory leaks in *clock_source_create() functions under drivers/gpu/drm/amd/display/dc leads to DoS",
+        "Description": "Memory leaks in *clock_source_create() functions under drivers/gpu/drm/amd/display/dc in the Linux kernel before 5.3.8 allow attackers to cause a denial of service (memory consumption). This affects the dce112_clock_source_create() function in drivers/gpu/drm/amd/display/dc/dce112/dce112_resource.c, the dce100_clock_source_create() function in drivers/gpu/drm/amd/display/dc/dce100/dce100_resource.c, the dcn10_clock_source_create() function in drivers/gpu/drm/amd/display/dc/dcn10/dcn10_resource.c, the dcn20_clock_source_create() function in drivers/gpu/drm/amd/display/dc/dcn20/dcn20_resource.c, the dce120_clock_source_create() function in drivers/gpu/drm/amd/display/dc/dce120/dce120_resource.c, the dce110_clock_source_create() function in drivers/gpu/drm/amd/display/dc/dce110/dce110_resource.c, and the dce80_clock_source_create() function in drivers/gpu/drm/amd/display/dc/dce80/dce80_resource.c, aka CID-055e547478a1.",
+        "Severity": "HIGH",
+        "References": [
+          "https://cdn.kernel.org/pub/linux/kernel/v5.x/ChangeLog-5.3.8",
+          "https://github.com/torvalds/linux/commit/055e547478a11a6360c7ce05e2afc3e366968a12",
+          "https://security.netapp.com/advisory/ntap-20191205-0001/",
+          "https://usn.ubuntu.com/4208-1/"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2019-19529",
+        "PkgName": "linux-libc-dev",
+        "InstalledVersion": "4.19.67-2+deb10u2",
+        "FixedVersion": "4.19.87-1",
+        "Title": "kernel: use-after-free bug caused by a malicious USB device in the drivers/net/can/usb/mcba_usb.c",
+        "Description": "In the Linux kernel before 5.3.11, there is a use-after-free bug that can be caused by a malicious USB device in the drivers/net/can/usb/mcba_usb.c driver, aka CID-4d6636498c41.",
+        "Severity": "HIGH",
+        "References": [
+          "http://lists.opensuse.org/opensuse-security-announce/2019-12/msg00029.html",
+          "http://www.openwall.com/lists/oss-security/2019/12/03/4",
+          "https://cdn.kernel.org/pub/linux/kernel/v5.x/ChangeLog-5.3.11",
+          "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-19529",
+          "https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/commit/?id=4d6636498c41891d0482a914dd570343a838ad79",
+          "https://usn.ubuntu.com/4225-1/",
+          "https://usn.ubuntu.com/4225-2/",
+          "https://usn.ubuntu.com/4226-1/",
+          "https://usn.ubuntu.com/4227-1/",
+          "https://usn.ubuntu.com/4227-2/"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2019-19815",
+        "PkgName": "linux-libc-dev",
+        "InstalledVersion": "4.19.67-2+deb10u2",
+        "Title": "kernel: NULL pointer dereference in f2fs_recover_fsync_data in fs/f2fs/recovery.c",
+        "Description": "In the Linux kernel 5.0.21, mounting a crafted f2fs filesystem image can cause a NULL pointer dereference in f2fs_recover_fsync_data in fs/f2fs/recovery.c. This is related to F2FS_P_SB in fs/f2fs/f2fs.h.",
+        "Severity": "HIGH",
+        "References": [
+          "https://github.com/bobfuzzer/CVE/tree/master/CVE-2019-19815",
+          "https://github.com/torvalds/linux/commit/4969c06a0d83c9c3dc50b8efcdc8eeedfce896f6#diff-41a7fa4590d2af87e82101f2b4dadb56",
+          "https://security.netapp.com/advisory/ntap-20200103-0001/"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2008-1687",
+        "PkgName": "m4",
+        "InstalledVersion": "1.4.18-2",
+        "Title": "m4: unquoted output of maketemp and mkstemp",
+        "Description": "The (1) maketemp and (2) mkstemp builtin functions in GNU m4 before 1.4.11 do not quote their output when a file is created, which might allow context-dependent attackers to trigger a macro expansion, leading to unspecified use of an incorrect filename.",
+        "Severity": "HIGH",
+        "References": [
+          "http://secunia.com/advisories/29671",
+          "http://secunia.com/advisories/29729",
+          "http://slackware.com/security/viewer.php?l=slackware-security\u0026y=2008\u0026m=slackware-security.510612",
+          "http://www.openwall.com/lists/oss-security/2008/04/07/1",
+          "http://www.openwall.com/lists/oss-security/2008/04/07/12",
+          "http://www.openwall.com/lists/oss-security/2008/04/07/3",
+          "http://www.openwall.com/lists/oss-security/2008/04/07/4",
+          "http://www.securityfocus.com/bid/28688",
+          "http://www.vupen.com/english/advisories/2008/1151/references",
+          "https://exchange.xforce.ibmcloud.com/vulnerabilities/41706"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2008-1688",
+        "PkgName": "m4",
+        "InstalledVersion": "1.4.18-2",
+        "Title": "m4: code execution via -F argument",
+        "Description": "Unspecified vulnerability in GNU m4 before 1.4.11 might allow context-dependent attackers to execute arbitrary code, related to improper handling of filenames specified with the -F option.  NOTE: it is not clear when this issue crosses privilege boundaries.",
+        "Severity": "HIGH",
+        "References": [
+          "http://osvdb.org/44272",
+          "http://secunia.com/advisories/29671",
+          "http://secunia.com/advisories/29729",
+          "http://slackware.com/security/viewer.php?l=slackware-security\u0026y=2008\u0026m=slackware-security.510612",
+          "http://www.openwall.com/lists/oss-security/2008/04/07/1",
+          "http://www.openwall.com/lists/oss-security/2008/04/07/3",
+          "http://www.securityfocus.com/bid/28688",
+          "http://www.vupen.com/english/advisories/2008/1151/references",
+          "https://exchange.xforce.ibmcloud.com/vulnerabilities/41704"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2008-4108",
+        "PkgName": "python",
+        "InstalledVersion": "2.7.16-1",
+        "Title": "python: Generic FAQ wizard moving tool insecure auxiliary /tmp file usage (symlink attack possible)",
+        "Description": "Tools/faqwiz/move-faqwiz.sh (aka the generic FAQ wizard moving tool) in Python 2.4.5 might allow local users to overwrite arbitrary files via a symlink attack on a tmp$RANDOM.tmp temporary file.  NOTE: there may not be common usage scenarios in which tmp$RANDOM.tmp is located in an untrusted directory.",
+        "Severity": "HIGH",
+        "References": [
+          "http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=498899",
+          "http://marc.info/?l=oss-security\u0026m=122148330903513\u0026w=2",
+          "http://marc.info/?l=oss-security\u0026m=122152861617434\u0026w=2",
+          "http://securityreason.com/securityalert/4274",
+          "http://www.securityfocus.com/bid/31184",
+          "http://www.securitytracker.com/id?1020904",
+          "http://www.vupen.com/english/advisories/2008/2659",
+          "https://bugzilla.redhat.com/show_bug.cgi?id=462326",
+          "https://exchange.xforce.ibmcloud.com/vulnerabilities/45161"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2008-4108",
+        "PkgName": "python-minimal",
+        "InstalledVersion": "2.7.16-1",
+        "Title": "python: Generic FAQ wizard moving tool insecure auxiliary /tmp file usage (symlink attack possible)",
+        "Description": "Tools/faqwiz/move-faqwiz.sh (aka the generic FAQ wizard moving tool) in Python 2.4.5 might allow local users to overwrite arbitrary files via a symlink attack on a tmp$RANDOM.tmp temporary file.  NOTE: there may not be common usage scenarios in which tmp$RANDOM.tmp is located in an untrusted directory.",
+        "Severity": "HIGH",
+        "References": [
+          "http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=498899",
+          "http://marc.info/?l=oss-security\u0026m=122148330903513\u0026w=2",
+          "http://marc.info/?l=oss-security\u0026m=122152861617434\u0026w=2",
+          "http://securityreason.com/securityalert/4274",
+          "http://www.securityfocus.com/bid/31184",
+          "http://www.securitytracker.com/id?1020904",
+          "http://www.vupen.com/english/advisories/2008/2659",
+          "https://bugzilla.redhat.com/show_bug.cgi?id=462326",
+          "https://exchange.xforce.ibmcloud.com/vulnerabilities/45161"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2008-4108",
+        "PkgName": "python2",
+        "InstalledVersion": "2.7.16-1",
+        "Title": "python: Generic FAQ wizard moving tool insecure auxiliary /tmp file usage (symlink attack possible)",
+        "Description": "Tools/faqwiz/move-faqwiz.sh (aka the generic FAQ wizard moving tool) in Python 2.4.5 might allow local users to overwrite arbitrary files via a symlink attack on a tmp$RANDOM.tmp temporary file.  NOTE: there may not be common usage scenarios in which tmp$RANDOM.tmp is located in an untrusted directory.",
+        "Severity": "HIGH",
+        "References": [
+          "http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=498899",
+          "http://marc.info/?l=oss-security\u0026m=122148330903513\u0026w=2",
+          "http://marc.info/?l=oss-security\u0026m=122152861617434\u0026w=2",
+          "http://securityreason.com/securityalert/4274",
+          "http://www.securityfocus.com/bid/31184",
+          "http://www.securitytracker.com/id?1020904",
+          "http://www.vupen.com/english/advisories/2008/2659",
+          "https://bugzilla.redhat.com/show_bug.cgi?id=462326",
+          "https://exchange.xforce.ibmcloud.com/vulnerabilities/45161"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2008-4108",
+        "PkgName": "python2-minimal",
+        "InstalledVersion": "2.7.16-1",
+        "Title": "python: Generic FAQ wizard moving tool insecure auxiliary /tmp file usage (symlink attack possible)",
+        "Description": "Tools/faqwiz/move-faqwiz.sh (aka the generic FAQ wizard moving tool) in Python 2.4.5 might allow local users to overwrite arbitrary files via a symlink attack on a tmp$RANDOM.tmp temporary file.  NOTE: there may not be common usage scenarios in which tmp$RANDOM.tmp is located in an untrusted directory.",
+        "Severity": "HIGH",
+        "References": [
+          "http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=498899",
+          "http://marc.info/?l=oss-security\u0026m=122148330903513\u0026w=2",
+          "http://marc.info/?l=oss-security\u0026m=122152861617434\u0026w=2",
+          "http://securityreason.com/securityalert/4274",
+          "http://www.securityfocus.com/bid/31184",
+          "http://www.securitytracker.com/id?1020904",
+          "http://www.vupen.com/english/advisories/2008/2659",
+          "https://bugzilla.redhat.com/show_bug.cgi?id=462326",
+          "https://exchange.xforce.ibmcloud.com/vulnerabilities/45161"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2019-9674",
+        "PkgName": "python2.7",
+        "InstalledVersion": "2.7.16-2+deb10u1",
+        "Title": "python: Nested zip file (Zip bomb) vulnerability in Lib/zipfile.py",
+        "Description": "Lib/zipfile.py in Python through 3.7.2 allows remote attackers to cause a denial of service (resource consumption) via a ZIP bomb.",
+        "Severity": "HIGH",
+        "References": [
+          "https://bugs.python.org/issue36260",
+          "https://bugs.python.org/issue36462",
+          "https://github.com/python/cpython/blob/master/Lib/zipfile.py",
+          "https://python-security.readthedocs.io/security.html#archives-and-zip-bomb",
+          "https://www.python.org/news/security/"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2019-9674",
+        "PkgName": "python2.7-minimal",
+        "InstalledVersion": "2.7.16-2+deb10u1",
+        "Title": "python: Nested zip file (Zip bomb) vulnerability in Lib/zipfile.py",
+        "Description": "Lib/zipfile.py in Python through 3.7.2 allows remote attackers to cause a denial of service (resource consumption) via a ZIP bomb.",
+        "Severity": "HIGH",
+        "References": [
+          "https://bugs.python.org/issue36260",
+          "https://bugs.python.org/issue36462",
+          "https://github.com/python/cpython/blob/master/Lib/zipfile.py",
+          "https://python-security.readthedocs.io/security.html#archives-and-zip-bomb",
+          "https://www.python.org/news/security/"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2019-9674",
+        "PkgName": "python3.7",
+        "InstalledVersion": "3.7.3-2",
+        "Title": "python: Nested zip file (Zip bomb) vulnerability in Lib/zipfile.py",
+        "Description": "Lib/zipfile.py in Python through 3.7.2 allows remote attackers to cause a denial of service (resource consumption) via a ZIP bomb.",
+        "Severity": "HIGH",
+        "References": [
+          "https://bugs.python.org/issue36260",
+          "https://bugs.python.org/issue36462",
+          "https://github.com/python/cpython/blob/master/Lib/zipfile.py",
+          "https://python-security.readthedocs.io/security.html#archives-and-zip-bomb",
+          "https://www.python.org/news/security/"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2019-9674",
+        "PkgName": "python3.7-minimal",
+        "InstalledVersion": "3.7.3-2",
+        "Title": "python: Nested zip file (Zip bomb) vulnerability in Lib/zipfile.py",
+        "Description": "Lib/zipfile.py in Python through 3.7.2 allows remote attackers to cause a denial of service (resource consumption) via a ZIP bomb.",
+        "Severity": "HIGH",
+        "References": [
+          "https://bugs.python.org/issue36260",
+          "https://bugs.python.org/issue36462",
+          "https://github.com/python/cpython/blob/master/Lib/zipfile.py",
+          "https://python-security.readthedocs.io/security.html#archives-and-zip-bomb",
+          "https://www.python.org/news/security/"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2005-2541",
+        "PkgName": "tar",
+        "InstalledVersion": "1.30+dfsg-6",
+        "Description": "Tar 1.15.1 does not properly warn the user when extracting setuid or setgid files, which may allow local users or remote attackers to gain privileges.",
+        "Severity": "CRITICAL",
+        "References": [
+          "http://marc.info/?l=bugtraq\u0026m=112327628230258\u0026w=2"
+        ]
+      }
+    ]
+  }
+]
