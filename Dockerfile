@@ -14,4 +14,6 @@ COPY . .
 
 RUN "python" "db_init.py"
 
+EXPOSE 5000
+
 CMD [ "python", "./vulpy.py" ]

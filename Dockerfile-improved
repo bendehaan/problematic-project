@@ -18,5 +18,6 @@ RUN "python" "db_init.py"
 
 USER nobody
 
+EXPOSE 5000
 
 CMD [ "python", "./vulpy.py" ]
