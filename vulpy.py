@@ -2,7 +2,7 @@
 
 from pathlib import Path
 
-from flask import Flask, g, redirect, request
+from flask import Flask, g, redirect, request, render_template
 
 import libsession
 from mod_api import mod_api
@@ -39,7 +39,7 @@ if csp:
 
 @app.route('/')
 def do_home():
-    return redirect('/posts')
+    return render_template('welcome.html')
 
 @app.before_request
 def before_request():
