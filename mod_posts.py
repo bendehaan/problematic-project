@@ -35,4 +35,3 @@ def do_create():
         libposts.post(username, text)
 
     return redirect('/')
-

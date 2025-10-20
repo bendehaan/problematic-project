@@ -1,7 +1,6 @@
-FROM python:3.7-buster
+FROM python:3.14
 
-RUN apt-get update -y
-RUN apt-get upgrade -y
+RUN apt-get update
 RUN apt-get install -y build-essential
 
 WORKDIR /usr/src/app
@@ -14,6 +13,6 @@ COPY . .
 
 RUN "python" "db_init.py"
 
-EXPOSE 5000
+EXPOSE 8080
 
 CMD [ "python", "./vulpy.py" ]

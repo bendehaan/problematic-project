@@ -93,4 +93,3 @@ def mfa_validate(username, otp):
         return True
     else:
         return False
-

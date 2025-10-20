@@ -29,5 +29,3 @@ def post(username, text):
     conn.commit()
 
     return True
-
-

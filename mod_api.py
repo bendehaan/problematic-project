@@ -68,5 +68,3 @@ def do_post_create():
 
     libposts.post(data['username'], data['text'])
     return "You are awesome! Post created."
-
-

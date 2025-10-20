@@ -22,4 +22,3 @@ for password in passwords:
     if result.returncode == 0:
         print("cracked! user: {} password: {}".format(username, password))
         break
-
