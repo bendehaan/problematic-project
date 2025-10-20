@@ -14,7 +14,7 @@ def cmd_api_client(message):
         password = click.prompt("Password", hide_input=True)
 
         r = requests.post(
-            "http://127.0.1.1:5000/api/key",
+            "http://127.0.1.1:8080/api/key",
             json={"username": username, "password": password},
         )
 
@@ -32,7 +32,7 @@ def cmd_api_client(message):
 
     api_key = api_key_file.open().read()
     r = requests.post(
-        "http://127.0.1.1:5000/api/post",
+        "http://127.0.1.1:8080/api/post",
         json={"text": message},
         headers={"X-APIKEY": api_key},
     )
