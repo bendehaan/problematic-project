@@ -39,7 +39,9 @@ if csp:
 
 @app.route("/")
 def do_home():
-    return redirect("/posts")
+    if "username" not in g.session:
+        return redirect("/user/login")
+    return render_template("welcome.html")
 
 
 @app.before_request

@@ -35,7 +35,7 @@ def do_login():
                 flash("Invalid OTP")
                 return render_template("user.login.mfa.html")
 
-        response = make_response(redirect("/"))
+        response = make_response(redirect("/posts"))
         response = libsession.create(response=response, username=username)
         return response
 
