@@ -6,7 +6,7 @@ readme = "README.md"
 requires-python = ">=3.14"
 dependencies = [
 	"aiohappyeyeballs==2.6.1",
-	"aiohttp==3.13.1",
+	"aiohttp==3.14.1",
 	"aiosignal==1.4.0",
 	"attrs==25.4.0",
 	"blinker==1.9.0",
