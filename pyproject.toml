@@ -28,7 +28,7 @@ dependencies = [
 	"markupsafe==3.0.3",
 	"maxminddb==2.8.2",
 	"multidict==6.7.0",
-	"pillow==12.0.0",
+	"pillow==13.0.0",
 	"propcache==0.4.1",
 	"pycparser==2.23",
 	"pyjwt==2.10.1",
